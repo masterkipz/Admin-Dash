@@ -99,6 +99,157 @@
       "aquisitionDate": "2023-06-30",
       "location": "Ilocos Norte",
       "personAccountable": "Jane Dave"
+    },
+    {
+      "propertyNumber": "PN-011",
+      "assetClassification": "Laptop",
+      "brand": "Dell",
+      "serialNumber": "S2-011",
+      "aquisitionCost": 70000,
+      "aquisitionDate": "2023-07-01",
+      "location": "Metro Manila",
+      "personAccountable": "John Smith"
+    },
+    {
+      "propertyNumber": "PN-012",
+      "assetClassification": "Printer",
+      "brand": "HP",
+      "serialNumber": "S3-012",
+      "aquisitionCost": 30000,
+      "aquisitionDate": "2023-07-02",
+      "location": "Cebu City",
+      "personAccountable": "Mary Lee"
+    },
+    {
+      "propertyNumber": "PN-013",
+      "assetClassification": "Mobile Phone",
+      "brand": "Samsung",
+      "serialNumber": "S4-013",
+      "aquisitionCost": 35000,
+      "aquisitionDate": "2023-07-03",
+      "location": "Davao City",
+      "personAccountable": "Juan dela Cruz"
+    },
+    {
+      "propertyNumber": "PN-014",
+      "assetClassification": "Server",
+      "brand": "IBM",
+      "serialNumber": "S5-014",
+      "aquisitionCost": 150000,
+      "aquisitionDate": "2023-07-04",
+      "location": "Quezon City",
+      "personAccountable": "Alex Tan"
+    },
+    {
+      "propertyNumber": "PN-015",
+      "assetClassification": "Tablet",
+      "brand": "Apple",
+      "serialNumber": "S6-015",
+      "aquisitionCost": 60000,
+      "aquisitionDate": "2023-07-05",
+      "location": "Baguio City",
+      "personAccountable": "Maria Santos"
+    },
+    {
+      "propertyNumber": "PN-016",
+      "assetClassification": "Projector",
+      "brand": "Epson",
+      "serialNumber": "S7-016",
+      "aquisitionCost": 40000,
+      "aquisitionDate": "2023-07-06",
+      "location": "Batangas City",
+      "personAccountable": "Peter Tan"
+    },
+    {
+      "propertyNumber": "PN-017",
+      "assetClassification": "Scanner",
+      "brand": "Canon",
+      "serialNumber": "S8-017",
+      "aquisitionCost": 25000,
+      "aquisitionDate": "2023-07-07",
+      "location": "Iloilo City",
+      "personAccountable": "Grace Lim"
+    },
+    {
+      "propertyNumber": "PN-018",
+      "assetClassification": "Keyboard",
+      "brand": "Logitech",
+      "serialNumber": "S9-018",
+      "aquisitionCost": 5000,
+      "aquisitionDate": "2023-07-08",
+      "location": "Cagayan de Oro",
+      "personAccountable": "Robert Lee"
+    },
+    {
+      "propertyNumber": "PN-019",
+      "assetClassification": "Keyboard",
+      "brand": "Razer",
+      "serialNumber": "S9-019",
+      "aquisitionCost": 7000,
+      "aquisitionDate": "2023-07-08",
+      "location": "Cagayan de Oro",
+      "personAccountable": "Robert John"
+    },
+    {
+      "propertyNumber": "PN-020",
+      "assetClassification": "Keyboard",
+      "brand": "Red Dragon",
+      "serialNumber": "S9-020",
+      "aquisitionCost": 5000,
+      "aquisitionDate": "2023-07-08",
+      "location": "Cagayan de Oro",
+      "personAccountable": "Robert Rule"
+    },
+    {
+      "propertyNumber": "PN-021",
+      "assetClassification": "Monitor",
+      "brand": "Samsung",
+      "serialNumber": "S9-021",
+      "aquisitionCost": 15000,
+      "aquisitionDate": "2022-12-01",
+      "location": "Manila",
+      "personAccountable": "Juan Dela Cruz"
+    },
+
+    {
+      "propertyNumber": "PN-022",
+      "assetClassification": "Laptop",
+      "brand": "Asus",
+      "serialNumber": "S9-022",
+      "aquisitionCost": 30000,
+      "aquisitionDate": "2022-11-15",
+      "location": "Cebu",
+      "personAccountable": "Maria Reyes"
+    },
+    {
+      "propertyNumber": "PN-023",
+      "assetClassification": "Headset",
+      "brand": "HyperX",
+      "serialNumber": "S9-023",
+      "aquisitionCost": 7000,
+      "aquisitionDate": "2023-01-20",
+      "location": "Davao",
+      "personAccountable": "Pedro Santos"
+    },
+    {
+      "propertyNumber": "PN-024",
+      "assetClassification": "Mouse",
+      "brand": "Logitech",
+      "serialNumber": "S9-024",
+      "aquisitionCost": 2500,
+      "aquisitionDate": "2022-09-10",
+      "location": "Quezon City",
+      "personAccountable": "Jasmine Lee"
+    },
+    {
+      "propertyNumber": "PN-025",
+      "assetClassification": "Printer",
+      "brand": "Canon",
+      "serialNumber": "S9-025",
+      "aquisitionCost": 10000,
+      "aquisitionDate": "2023-02-05",
+      "location": "Makati",
+      "personAccountable": "David Kim"
     }
   ]
 }

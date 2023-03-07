@@ -5,11 +5,13 @@ import { Box } from "@mui/material";
 
 const InventoryTable = () => {
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Box
           sx={{
             border: "3px solid",
@@ -17,13 +19,13 @@ const InventoryTable = () => {
             borderRadius: 4,
             width: "90%",
             p: 2,
-            backgroundColor: "#134991"
+            backgroundColor: "#134991",
           }}
         >
           <ItemHeaderContainer />
           <ItemContainer />
         </Box>
-    </div>
+      </div>
   );
 };
 
