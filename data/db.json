@@ -1,0 +1,31 @@
+{
+  "inventory": [
+    {
+      "id": 1,
+      "product_name": "Smartphone",
+      "serial_number": "12345ABC",
+      "type": "Electronics",
+      "cost": 500
+    },
+    {
+      "id": 2,
+      "product_name": "Laptop",
+      "serial_number": "67890DEF",
+      "type": "Electronics",
+      "cost": 1000
+    },
+    {
+      "id": 3,
+      "product_name": "T-shirt",
+      "serial_number": "ABCDE12345",
+      "type": "Clothing",
+      "cost": 20
+    },
+    {
+      "id": 4,
+      "product_name": "Shoes",
+      "serial_number": "FGHIJ67890",
+      "type": "Footwear"
+    }
+  ]
+}

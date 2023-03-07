@@ -23,12 +23,11 @@ const Sidebar = () => {
         width: 240,
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          background : "#134991",
           width: 240,
           boxSizing: "border-box",
           paddingTop: "20px",
           alignItems: "center",
-          background: 'linear-gradient(to bottom, #134991, #6C9FEC)',
+          background: "linear-gradient(to bottom, #134991, #6C9FEC)",
         },
       }}
     >
@@ -39,7 +38,7 @@ const Sidebar = () => {
           src={LogoImage}
           alt="DICT-Logo"
         />
-        <Link style={{ textDecoration: 'none' }} to="/">
+        <Link style={{ textDecoration: "none" }} to="/">
           <ListItem
             sx={{
               "&:hover": {
@@ -51,10 +50,10 @@ const Sidebar = () => {
             <ListItemIcon>
               <HomeIcon style={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText sx={{color: "white",}} primary="Home" />
+            <ListItemText sx={{ color: "white" }} primary="Home" />
           </ListItem>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/inventory">
+        <Link style={{ textDecoration: "none" }} to="/inventory">
           <ListItem
             sx={{
               "&:hover": {
@@ -66,10 +65,10 @@ const Sidebar = () => {
             <ListItemIcon>
               <InventoryIcon style={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText sx={{color: "white",}} primary="Inventory" />
+            <ListItemText sx={{ color: "white" }} primary="Inventory" />
           </ListItem>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/help">
+        <Link style={{ textDecoration: "none" }} to="/help">
           <ListItem
             sx={{
               "&:hover": {
@@ -81,7 +80,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <HelpIcon style={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText sx={{color: "white",}} primary="Help" />
+            <ListItemText sx={{ color: "white" }} primary="Help" />
           </ListItem>
         </Link>
       </List>
