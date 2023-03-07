@@ -1,5 +1,5 @@
 import React from "react";
-import InventoryTable from "../UsableComponents/InventoryTable";
+import InventoryTable from "../ItemComponents/InventoryTable";
 
 const InventoryContent = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import ItemHeaderContainer from "./ItemHeaderContainer";
 import ItemContainer from "./ItemContainer";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 const InventoryTable = () => {
   return (
