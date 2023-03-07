@@ -7,7 +7,7 @@ const ItemHeaderContainer = () => {
       <Paper
         style={{
           height: "40px",
-          width: "90%",
+          width: "100%",
         }}
         variant="outlined"
         elevation={3}
@@ -17,23 +17,33 @@ const ItemHeaderContainer = () => {
           spacing={2}
           style={{
             textAlign: "center",
-            fontWeight: "600",
+            fontWeight: "700",
+            fontSize: "0.9rem",
           }}
         >
-          <Grid item lg={1} style={{marginTop:"8px"}}>
-            ID
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Property Number
           </Grid>
-          <Grid item lg={3} style={{marginTop:"8px"}}>
-            Product Name
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Asset Classification
           </Grid>
-          <Grid item lg={3} style={{marginTop:"8px"}}>
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Item/Brand/Model
+          </Grid>
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
             Serial Number
           </Grid>
-          <Grid item lg={3} style={{marginTop:"8px"}}>
-            Type
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Aquisition Cost
           </Grid>
-          <Grid item lg={2} style={{marginTop:"8px"}}>
-            Cost
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Aquisition Date
+          </Grid>
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Location
+          </Grid>
+          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+            Person Accountable
           </Grid>
         </Grid>
       </Paper>

@@ -1,31 +1,104 @@
 {
-  "inventory": [
+  "items": [
     {
-      "id": 1,
-      "product_name": "Smartphone",
-      "serial_number": "12345ABC",
-      "type": "Electronics",
-      "cost": 500
+      "propertyNumber": "PN-001",
+      "assetClassification": "Laptop",
+      "brand": "Dell",
+      "serialNumber": "S1-001",
+      "aquisitionCost": 50000,
+      "aquisitionDate": "2022-01-01",
+      "location": "Manila",
+      "personAccountable": "John Doe"
     },
     {
-      "id": 2,
-      "product_name": "Laptop",
-      "serial_number": "67890DEF",
-      "type": "Electronics",
-      "cost": 1000
+      "propertyNumber": "PN-002",
+      "assetClassification": "Desktop",
+      "brand": "HP",
+      "serialNumber": "S1-002",
+      "aquisitionCost": 45000,
+      "aquisitionDate": "2022-01-02",
+      "location": "Quezon City",
+      "personAccountable": "Jane Smith"
     },
     {
-      "id": 3,
-      "product_name": "T-shirt",
-      "serial_number": "ABCDE12345",
-      "type": "Clothing",
-      "cost": 20
+      "propertyNumber": "PN-003",
+      "assetClassification": "Smartphone",
+      "brand": "Samsung",
+      "serialNumber": "S1-003",
+      "aquisitionCost": 30000,
+      "aquisitionDate": "2022-01-03",
+      "location": "Makati",
+      "personAccountable": "Robert Garcia"
     },
     {
-      "id": 4,
-      "product_name": "Shoes",
-      "serial_number": "FGHIJ67890",
-      "type": "Footwear"
+      "propertyNumber": "PN-004",
+      "assetClassification": "Tablet",
+      "brand": "Apple",
+      "serialNumber": "S1-004",
+      "aquisitionCost": 25000,
+      "aquisitionDate": "2022-01-04",
+      "location": "Taguig",
+      "personAccountable": "Jenny Lim"
+    },
+    {
+      "propertyNumber": "PN-005",
+      "assetClassification": "Laptop",
+      "brand": "Dell",
+      "serialNumber": "S1-005",
+      "aquisitionCost": 35000,
+      "aquisitionDate": "2022-02-10",
+      "location": "Makati",
+      "personAccountable": "John Cruz"
+    },
+    {
+      "propertyNumber": "PN-006",
+      "assetClassification": "Printer",
+      "brand": "Canon",
+      "serialNumber": "S1-006",
+      "aquisitionCost": 15000,
+      "aquisitionDate": "2022-04-20",
+      "location": "Pasig",
+      "personAccountable": "Maria Tan"
+    },
+    {
+      "propertyNumber": "PN-007",
+      "assetClassification": "Printer",
+      "brand": "Canon",
+      "serialNumber": "S1-007",
+      "aquisitionCost": 15000,
+      "aquisitionDate": "2022-04-20",
+      "location": "Pasig",
+      "personAccountable": "Maria Tan"
+    },
+    {
+      "propertyNumber": "PN-008",
+      "assetClassification": "Mobile Phone",
+      "brand": "Samsung",
+      "serialNumber": "S1-008",
+      "aquisitionCost": 20000,
+      "aquisitionDate": "2022-05-25",
+      "location": "Parañaque",
+      "personAccountable": "Mark Reyes"
+    },
+    {
+      "propertyNumber": "PN-009",
+      "assetClassification": "Camera",
+      "brand": "Nikon",
+      "serialNumber": "S1-009",
+      "aquisitionCost": 50000,
+      "aquisitionDate": "2022-06-30",
+      "location": "Mandaluyong",
+      "personAccountable": "Sarah Gomez"
+    },
+    {
+      "propertyNumber": "PN-010",
+      "assetClassification": "CCTV",
+      "brand": "Aluah",
+      "serialNumber": "S1-010",
+      "aquisitionCost": 50000,
+      "aquisitionDate": "2023-06-30",
+      "location": "Ilocos Norte",
+      "personAccountable": "Jane Dave"
     }
   ]
 }
