@@ -18,21 +18,23 @@ const Sidebar = () => {
 
   return (
     <Drawer
+      className="side-container"
       variant="permanent"
       sx={{
-        width: 240,
-        flexShrink: 0,
-        borderRadius: "20px",
-        overflow: "hidden",
         "& .MuiDrawer-paper": {
-          width: 240,
-          margin:"10px",
+          marginLeft: "10px",
+          marginRight: "10px",
+          marginTop: "1%",
+          marginBottom: "1%",
+          width: "240px",
+          height: "95%",
           boxSizing: "border-box",
           paddingTop: "20px",
           alignItems: "center",
-          background: "linear-gradient(to bottom, #134991, #6C9FEC)",
+          background: " #134991",
           borderRadius: "20px",
           overflow: "hidden",
+          fontFamily: "Poppins, sans-serif",
         },
       }}
     >

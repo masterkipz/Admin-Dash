@@ -79,7 +79,9 @@ function ItemContainer() {
     return (
       <div>
         <h1 style={{ color: "white" }}>Something went wrong</h1>
-        <p style={{ color: "white" }}>Sorry, we couldn't fetch the data you were looking for</p>
+        <p style={{ color: "white" }}>
+          Sorry, we couldn't fetch the data you were looking for
+        </p>
         <p style={{ color: "white" }}>Please try again later.</p>
       </div>
     );
@@ -92,17 +94,24 @@ function ItemContainer() {
         style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}
       >
         <div>
-          <MyInputField
-            style={{ backgroundColor: "white" }}
+          <input
+            type="text"
+            placeholder="Search Item..."
             value={searchTerm}
             onChange={handleProperSearchTermChange}
-            placeholder="Search Item..."
-            InputProps={{
-              style: {
-                fontFamily: "'Poppins', sans-serif",
-                color: "white",
-                borderWidth: "2px",
-              },
+            style={{
+              height: "24px",
+              width: "200px",
+              border: "1px solid",
+              borderRadius: "8px",
+              borderColor: "gray",
+              backgroundColor: "white",
+              padding: "5px",
+              outline: "none",
+              fontSize: "14px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+              fontFamily: "Poppins, san-serif",
             }}
           />
         </div>
@@ -139,43 +148,47 @@ function ItemContainer() {
         >
           Delete
         </Button>
-        <div style={{ marginLeft: "300px" }}>
-          <Button
-            style={{
-              marginLeft: "24px",
-              color: "black",
-              backgroundColor: page === 1 ? "#E1D9D1" : "white",
-            }}
-            variant="contained"
-            disabled={page === 1}
-            onClick={handlePrevClick}
-          >
-            Prev
-          </Button>
 
-          <Button
-            style={{
-              marginLeft: "24px",
-              color: "black",
-              backgroundColor:
-                page === Math.ceil(data.length / 10) ? "#E1D9D1" : "white",
-            }}
-            variant="contained"
-            disabled={page === Math.ceil(data.length / 10)}
-            onClick={handleNextClick}
-          >
-            Next
-          </Button>
-        </div>
+        <Button
+          style={{
+            right: "10px",
+            marginLeft: "auto",
+            marginRight: "12px",
+            color: "black",
+            backgroundColor: page === 1 ? "#E1D9D1" : "white",
+          }}
+          variant="contained"
+          disabled={page === 1}
+          onClick={handlePrevClick}
+        >
+          Prev
+        </Button>
+
+        <Button
+          style={{
+            marginLeft: "12px",
+            marginRight: "12px",
+            color: "black",
+            backgroundColor:
+              page === Math.ceil(data.length / 10) ? "#E1D9D1" : "white",
+          }}
+          variant="contained"
+          disabled={page === Math.ceil(data.length / 10)}
+          onClick={handleNextClick}
+        >
+          Next
+        </Button>
       </div>
 
       <ItemHeaderContainer />
+
       <div>
         {filteredResults.slice(startIndex, endIndex).map((item) => (
           <Stack alignItems="center" marginTop="10px">
             <Paper
               key={item.id}
               style={{
+
                 height: "40px",
                 width: "100%",
               }}
@@ -190,28 +203,28 @@ function ItemContainer() {
                   fontWeight: "500",
                 }}
               >
-                <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
                   {item.propertyNumber}
                 </Grid>
-                <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
                   {item.assetClassification}
                 </Grid>
-                <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
                   {item.brand}
                 </Grid>
-                <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
                   {item.serialNumber}
                 </Grid>
-                <Grid item lg={1} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1} style={{ marginTop: "10px" }}>
                   {item.aquisitionCost}
                 </Grid>
-                <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
                   {item.aquisitionDate}
                 </Grid>
-                <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
                   {item.location}
                 </Grid>
-                <Grid item lg={2} style={{ marginTop: "8px" }}>
+                <Grid item md={1} lg={2} style={{ marginTop: "10px" }}>
                   {item.personAccountable}
                 </Grid>
               </Grid>
@@ -219,12 +232,6 @@ function ItemContainer() {
           </Stack>
         ))}
       </div>
-      <div
-        style={{
-          marginTop: "10px",
-          display: "flex",
-        }}
-      ></div>
     </>
   );
 }

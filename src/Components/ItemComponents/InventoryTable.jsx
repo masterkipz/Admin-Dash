@@ -15,11 +15,11 @@ const InventoryTable = () => {
         <Box
           sx={{
             border: "3px solid",
-            borderColor: "primary.main",
+            borderColor: "transparent",
             borderRadius: 4,
             width: "90%",
             p: 2,
-            backgroundColor: "#134991",
+            backgroundImage: "linear-gradient(to bottom, #4c9798, #87bee3)",
           }}
         >
           <ItemContainer />
