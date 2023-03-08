@@ -22,7 +22,6 @@ const InventoryTable = () => {
             backgroundColor: "#134991",
           }}
         >
-          <ItemHeaderContainer />
           <ItemContainer />
         </Box>
       </div>

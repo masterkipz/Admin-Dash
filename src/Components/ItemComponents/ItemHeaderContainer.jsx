@@ -18,14 +18,14 @@ const ItemHeaderContainer = () => {
           style={{
             textAlign: "center",
             fontWeight: "700",
-            fontSize: "0.9rem",
+            fontSize: "0.8rem",
           }}
         >
           <Grid item lg={1.5} style={{ marginTop: "8px" }}>
-            Property Number
+            Property ID
           </Grid>
           <Grid item lg={1.5} style={{ marginTop: "8px" }}>
-            Asset Classification
+            Classification
           </Grid>
           <Grid item lg={1.5} style={{ marginTop: "8px" }}>
             Item/Brand/Model
@@ -33,8 +33,8 @@ const ItemHeaderContainer = () => {
           <Grid item lg={1.5} style={{ marginTop: "8px" }}>
             Serial Number
           </Grid>
-          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
-            Aquisition Cost
+          <Grid item lg={1} style={{ marginTop: "8px" }}>
+            Cost
           </Grid>
           <Grid item lg={1.5} style={{ marginTop: "8px" }}>
             Aquisition Date
@@ -42,7 +42,7 @@ const ItemHeaderContainer = () => {
           <Grid item lg={1.5} style={{ marginTop: "8px" }}>
             Location
           </Grid>
-          <Grid item lg={1.5} style={{ marginTop: "8px" }}>
+          <Grid item lg={2} style={{ marginTop: "8px" }}>
             Person Accountable
           </Grid>
         </Grid>

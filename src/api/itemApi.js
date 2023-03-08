@@ -1,6 +1,6 @@
 import { queryCache } from 'react-query';
 
-const fetchAssets = async () => {
+const fetchItem = async () => {
   const response = await fetch('http://localhost:3500/items');
   if (!response.ok) {
     throw new Error('Network response was not ok');
@@ -10,9 +10,17 @@ const fetchAssets = async () => {
 
 const queryKey = 'item';
 
-const refetchAssets = async () => {
+const refetchItem = async () => {
   await queryCache.invalidateQueries(queryKey);
-  await queryCache.prefetchQuery(queryKey, fetchAssets);
+  await queryCache.prefetchQuery(queryKey, fetchItem);
 };
 
-export { fetchAssets, refetchAssets };
+const searchItem = async (searchTerm) => {
+  const response = await fetch(`http://localhost:3500/items?search=${searchTerm}`);
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+};
+
+export { fetchItem, refetchItem, searchItem };

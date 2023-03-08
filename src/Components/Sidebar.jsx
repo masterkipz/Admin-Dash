@@ -22,12 +22,17 @@ const Sidebar = () => {
       sx={{
         width: 240,
         flexShrink: 0,
+        borderRadius: "20px",
+        overflow: "hidden",
         "& .MuiDrawer-paper": {
           width: 240,
+          margin:"10px",
           boxSizing: "border-box",
           paddingTop: "20px",
           alignItems: "center",
           background: "linear-gradient(to bottom, #134991, #6C9FEC)",
+          borderRadius: "20px",
+          overflow: "hidden",
         },
       }}
     >
