@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import Sidebar from "./Components/Sidebar";
 import Home from "./Components/Home";
 import Inventory from "./Components/Inventory";
 import Help from "./Components/Help";

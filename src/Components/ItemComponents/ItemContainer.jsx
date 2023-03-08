@@ -117,39 +117,59 @@ function ItemContainer() {
         </div>
 
         <Button
+          sx={{
+            border: "1.5px solid",
+            borderRadius: "15px",
+            borderColor: "#37aaf1",
+          }}
           style={{
             marginLeft: "24px",
-            color: "white",
-            backgroundColor: "orange",
+            color: "black",
+            backgroundColor: "white",
           }}
-          variant="contained"
+          variant="outlined"
         >
           Add Item
         </Button>
 
         <Button
+          sx={{
+            border: "1.5px solid",
+            borderRadius: "15px",
+            borderColor: "#46decd",
+          }}
           style={{
             marginLeft: "24px",
-            color: "white",
-            backgroundColor: "green",
+            color: "black",
+            backgroundColor: "white",
           }}
-          variant="contained"
+          variant="outlined"
         >
           Update
         </Button>
 
         <Button
+          sx={{
+            border: "1.5px solid",
+            borderRadius: "15px",
+            borderColor: "#f5181d",
+          }}
           style={{
             marginLeft: "24px",
-            color: "white",
-            backgroundColor: "red",
+            color: "black",
+            backgroundColor: "white",
           }}
-          variant="contained"
+          variant="outlined"
         >
           Delete
         </Button>
 
         <Button
+          sx={{
+            border: "1.5px solid",
+            borderRadius: "15px",
+            borderColor: "transparent",
+          }}
           style={{
             right: "10px",
             marginLeft: "auto",
@@ -165,6 +185,11 @@ function ItemContainer() {
         </Button>
 
         <Button
+          sx={{
+            border: "1.5px solid",
+            borderRadius: "15px",
+            borderColor: "transparent",
+          }}
           style={{
             marginLeft: "12px",
             marginRight: "12px",
@@ -188,7 +213,6 @@ function ItemContainer() {
             <Paper
               key={item.id}
               style={{
-
                 height: "40px",
                 width: "100%",
               }}
