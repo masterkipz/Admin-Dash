@@ -1,35 +1,26 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {
-  Grid,
-  Paper,
-  Stack,
-  Button,
-  TextField,
-  CircularProgress,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Grid, Paper, Stack, Button, CircularProgress } from "@mui/material";
 import { useQuery } from "react-query";
 import { fetchItem, searchItem } from "../../api/itemApi";
 import ItemHeaderContainer from "./ItemHeaderContainer";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import AddItem from "../ItemComponents/ItemFunction/AddItem";
 
-const MyInputField = styled(TextField)(({ theme }) => ({
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "white",
-      borderWidth: "2px",
-    },
-    "&:hover fieldset": {
-      borderColor: "white",
-    },
-    "&.Mui-focused fieldset": {
-      borderColor: "white",
-    },
-  },
-  "& .MuiInputBase-input": {
-    color: "black",
-  },
-}));
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  bgcolor: "background.paper",
+  border: "2px solid transparent", // update to transparent
+  borderRadius: 3, // add border radius
+  boxShadow: 24,
+  p: 4,
+};
 
 function ItemContainer() {
   const [page, setPage] = useState(1);
@@ -44,6 +35,10 @@ function ItemContainer() {
   const startIndex = (page - 1) * 10;
   const endIndex = startIndex + 10;
 
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   useEffect(() => {
     const fetchData = async () => {
       const results = await searchItem(searchTerm);
@@ -55,6 +50,7 @@ function ItemContainer() {
 
   const handleProperSearchTermChange = (event) => {
     setProperSearchTerm(event.target.value);
+    setPage(1);
   };
 
   // Filter the searchResults array to only include items that match the search term
@@ -117,12 +113,14 @@ function ItemContainer() {
         </div>
 
         <Button
+          onClick={handleOpen}
           sx={{
             border: "1.5px solid",
             borderRadius: "15px",
             borderColor: "#37aaf1",
           }}
           style={{
+            fontFamily: "Poppins, sans-serif",
             marginLeft: "24px",
             color: "black",
             backgroundColor: "white",
@@ -132,6 +130,31 @@ function ItemContainer() {
           Add Item
         </Button>
 
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
+        >
+          <Fade in={open}>
+            <Box
+              style={{
+                backgroundImage: "linear-gradient(to bottom, #87bee3, #4c9798)",
+              }}
+              sx={style}
+            >
+              <AddItem />
+            </Box>
+          </Fade>
+        </Modal>
+
         <Button
           sx={{
             border: "1.5px solid",
@@ -139,6 +162,7 @@ function ItemContainer() {
             borderColor: "#46decd",
           }}
           style={{
+            fontFamily: "Poppins, sans-serif",
             marginLeft: "24px",
             color: "black",
             backgroundColor: "white",
@@ -150,6 +174,7 @@ function ItemContainer() {
 
         <Button
           sx={{
+            fontFamily: "Poppins, sans-serif",
             border: "1.5px solid",
             borderRadius: "15px",
             borderColor: "#f5181d",
@@ -171,6 +196,7 @@ function ItemContainer() {
             borderColor: "transparent",
           }}
           style={{
+            fontFamily: "Poppins, sans-serif",
             right: "10px",
             marginLeft: "auto",
             marginRight: "12px",
@@ -191,6 +217,7 @@ function ItemContainer() {
             borderColor: "transparent",
           }}
           style={{
+            fontFamily: "Poppins, sans-serif",
             marginLeft: "12px",
             marginRight: "12px",
             color: "black",

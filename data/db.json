@@ -210,7 +210,6 @@
       "location": "Manila",
       "personAccountable": "Juan Dela Cruz"
     },
-
     {
       "propertyNumber": "PN-022",
       "assetClassification": "Laptop",
@@ -250,6 +249,126 @@
       "aquisitionDate": "2023-02-05",
       "location": "Makati",
       "personAccountable": "David Kim"
+    },
+    {
+      "propertyNumber": "PN-111",
+      "assetClassification": "Laptop",
+      "brand": "Acer",
+      "serialNumber": "SN-111",
+      "aquisitionCost": "10000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Ilocos",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-222",
+      "assetClassification": "Desktop",
+      "brand": "Xitrix",
+      "serialNumber": "SN-222",
+      "aquisitionCost": "20000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Cebu City",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-333",
+      "assetClassification": "Mobile Phone",
+      "brand": "Lenovo",
+      "serialNumber": "SN-333",
+      "aquisitionCost": "5000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Mark Lester"
+    },
+    {
+      "propertyNumber": "PN-444",
+      "assetClassification": "Keyboard",
+      "brand": "Razer",
+      "serialNumber": "SN-444",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-555",
+      "assetClassification": "Mouse",
+      "brand": "Razer",
+      "serialNumber": "SN-555",
+      "aquisitionCost": "20000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Batac",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-666",
+      "assetClassification": "Mic",
+      "brand": "Razer",
+      "serialNumber": "SN-666",
+      "aquisitionCost": "5000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Batac",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-777",
+      "assetClassification": "Mic",
+      "brand": "Lenovo",
+      "serialNumber": "SN-777",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-030",
+      "assetClassification": "Mobile Phone",
+      "brand": "Razer",
+      "serialNumber": "SN-030",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Cebu City",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-040",
+      "assetClassification": "Laptop",
+      "brand": "Razer",
+      "serialNumber": "SN-040",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Cebu City",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-404",
+      "assetClassification": "Mobile Phone",
+      "brand": "Acer",
+      "serialNumber": "SN-333",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Mark Lester"
+    },
+    {
+      "propertyNumber": "PN-405",
+      "assetClassification": "Mobile",
+      "brand": "Acer",
+      "serialNumber": "SN-305",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-406",
+      "assetClassification": "Mobile",
+      "brand": "Acer",
+      "serialNumber": "SN-306",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
     }
   ]
 }

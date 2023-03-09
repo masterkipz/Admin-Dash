@@ -11,7 +11,7 @@ const ItemHeaderContainer = () => {
           width: "100%",
         }}
         variant="outlined"
-        elevation={3}
+        elevation={0}
       >
         <Grid
           container

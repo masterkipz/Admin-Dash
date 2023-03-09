@@ -18,15 +18,15 @@ function Side() {
     <div className="side-container">
       <Box
         sx={{
-          height: "95%",
-          backgroundImage: "linear-gradient(to bottom, #fdc47f, #fae7d4)",
+          height: "97%",
+          backgroundImage: "linear-gradient(to bottom, #4c9798, #87bee3)",
           borderRadius: "10px",
           marginLeft: "10px",
           marginTop: "10px",
           textAlign: "center",
         }}
       >
-        <div style={{ padding: "20px"}}>
+        <div style={{ padding: "20px" }}>
           <Avatar
             style={{ margin: "0 auto" }}
             sx={{
@@ -37,7 +37,7 @@ function Side() {
             alt="Remy Sharp"
             src={LogoImage}
           />
-          <ListItemText sx={{marginTop:"10px"}}>Admin User</ListItemText>
+          <ListItemText sx={{ marginTop: "10px" }}>Admin User</ListItemText>
         </div>
 
         <Stack spacing={2}>
