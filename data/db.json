@@ -369,6 +369,56 @@
       "aquisitionDate": "2023-05-25",
       "location": "Laoag",
       "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "adasd",
+      "assetClassification": "sada",
+      "brand": "zxcxza",
+      "serialNumber": "dsad",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "asdasxz",
+      "location": "asdsa",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "adasdasd",
+      "assetClassification": "sada",
+      "brand": "zxcxza",
+      "serialNumber": "dsad",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "asdasxz",
+      "location": "asdsa",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "adasdasdasd",
+      "assetClassification": "sada",
+      "brand": "zxcxza",
+      "serialNumber": "dsad",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "asdasxz",
+      "location": "asdsa",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "PN-1231412",
+      "assetClassification": "Laptop",
+      "brand": "Lenovo",
+      "serialNumber": "SN-111",
+      "aquisitionCost": "012312",
+      "aquisitionDate": "2023-05-24",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "12312312f",
+      "assetClassification": "asdasd",
+      "brand": "asdasd",
+      "serialNumber": "asdasd",
+      "aquisitionCost": "012321",
+      "aquisitionDate": "asdas",
+      "location": "asdasd",
+      "personAccountable": "asdasd"
     }
   ]
 }

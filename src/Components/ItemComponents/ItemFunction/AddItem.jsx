@@ -1,6 +1,5 @@
-import { Button, Alert } from "@mui/material";
+import { Button } from "@mui/material";
 import React, { useState } from "react";
-import { queryCache } from 'react-query';
 import { addItem } from "../../../api/itemApi";
 
 const AddItem = () => {
@@ -17,6 +16,7 @@ const AddItem = () => {
 
     const handleSubmit = async (event) => {
       event.preventDefault();
+      try{
         await addItem(item);
         setItem({
           propertyNumber: "",
@@ -28,8 +28,11 @@ const AddItem = () => {
           location: "",
           personAccountable: "",
         });
-        
-        await queryCache.invalidateQueries("item");
+        console.log("Success")
+      }
+      catch(error){
+        console.log(error.message);
+      }
     };
   const handleChange = (event) => {
     const { name, value } = event.target;
