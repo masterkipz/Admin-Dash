@@ -2,13 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Grid, Paper, Stack, Button, CircularProgress } from "@mui/material";
 import { useQuery } from "react-query";
-import { fetchItem, searchItem } from "../../api/itemApi";
+import { fetchItem, searchItem, deleteItem } from "../../api/itemApi";
 import ItemHeaderContainer from "./ItemHeaderContainer";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import AddItem from "../ItemComponents/ItemFunction/AddItem";
+import UpdateItem from "../ItemComponents/ItemFunction/UpdateItem";
 
 const style = {
   position: "absolute",
@@ -35,9 +36,17 @@ function ItemContainer() {
   const startIndex = (page - 1) * 10;
   const endIndex = startIndex + 10;
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [openAddItem, setOpenAddItem] = React.useState(false);
+  const handleOpenAddItem = () => setOpenAddItem(true);
+  const handleCloseAddItem = () => setOpenAddItem(false);
+
+  const [openUpdateItem, setOpenUpdateItem] = React.useState(false);
+  const handleOpenUpdateItem = () => setOpenUpdateItem(true);
+  const handleCloseUpdateItem = () => setOpenUpdateItem(false);
+
+  const [openDeleteItem, setOpenDeleteItem] = React.useState(false);
+  const handleOpenDeleteItem = () => setOpenDeleteItem(true);
+  const handleCloseDeleteItem = () => setOpenDeleteItem(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,7 +62,6 @@ function ItemContainer() {
     setPage(1);
   };
 
-  // Filter the searchResults array to only include items that match the search term
   const filteredResults = searchResults.filter(
     (item) =>
       item.propertyNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -82,6 +90,8 @@ function ItemContainer() {
       </div>
     );
   }
+
+
 
   return (
     <>
@@ -112,8 +122,85 @@ function ItemContainer() {
           />
         </div>
 
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={openAddItem}
+          onClose={handleCloseAddItem}
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
+        >
+          <Fade in={openAddItem}>
+            <Box
+              style={{
+                backgroundImage: "linear-gradient(to bottom, #87bee3, #4c9798)",
+              }}
+              sx={style}
+            >
+              <AddItem />
+            </Box>
+          </Fade>
+        </Modal>
+
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={openUpdateItem}
+          onClose={handleCloseUpdateItem}
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
+        >
+          <Fade in={openUpdateItem}>
+            <Box
+              style={{
+                backgroundImage: "linear-gradient(to bottom, #87bee3, #4c9798)",
+              }}
+              sx={style}
+            >
+              <UpdateItem />
+            </Box>
+          </Fade>
+        </Modal>
+
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={openDeleteItem}
+          onClose={handleCloseDeleteItem}
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
+        >
+          <Fade in={openDeleteItem}>
+            <Box
+              style={{
+                backgroundImage: "linear-gradient(to bottom, #87bee3, #4c9798)",
+              }}
+              sx={style}
+            >
+              <Button variant="contained" color="primary">
+                Delete
+              </Button>
+            </Box>
+          </Fade>
+        </Modal>
+
         <Button
-          onClick={handleOpen}
+          onClick={handleOpenAddItem}
           sx={{
             border: "1.5px solid",
             borderRadius: "15px",
@@ -128,65 +215,6 @@ function ItemContainer() {
           variant="outlined"
         >
           Add Item
-        </Button>
-
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          slots={{ backdrop: Backdrop }}
-          slotProps={{
-            backdrop: {
-              timeout: 500,
-            },
-          }}
-        >
-          <Fade in={open}>
-            <Box
-              style={{
-                backgroundImage: "linear-gradient(to bottom, #87bee3, #4c9798)",
-              }}
-              sx={style}
-            >
-              <AddItem />
-            </Box>
-          </Fade>
-        </Modal>
-
-        <Button
-          sx={{
-            border: "1.5px solid",
-            borderRadius: "15px",
-            borderColor: "#46decd",
-          }}
-          style={{
-            fontFamily: "Poppins, sans-serif",
-            marginLeft: "24px",
-            color: "black",
-            backgroundColor: "white",
-          }}
-          variant="outlined"
-        >
-          Update
-        </Button>
-
-        <Button
-          sx={{
-            fontFamily: "Poppins, sans-serif",
-            border: "1.5px solid",
-            borderRadius: "15px",
-            borderColor: "#f5181d",
-          }}
-          style={{
-            marginLeft: "24px",
-            color: "black",
-            backgroundColor: "white",
-          }}
-          variant="outlined"
-        >
-          Delete
         </Button>
 
         <Button
@@ -254,29 +282,75 @@ function ItemContainer() {
                   fontWeight: "500",
                 }}
               >
-                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.propertyNumber}
                 </Grid>
-                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.assetClassification}
                 </Grid>
-                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.brand}
                 </Grid>
-                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.serialNumber}
                 </Grid>
-                <Grid item md={1} lg={1} style={{ marginTop: "10px" }}>
-                  {item.aquisitionCost}
-                </Grid>
-                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
+
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.aquisitionDate}
                 </Grid>
-                <Grid item md={1} lg={1.5} style={{ marginTop: "10px" }}>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.location}
                 </Grid>
-                <Grid item md={1} lg={2} style={{ marginTop: "10px" }}>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
                   {item.personAccountable}
+                </Grid>
+                <Grid item md={1} lg={1.3} style={{ marginTop: "10px" }}>
+                  {item.aquisitionCost}
+                </Grid>
+                <Grid lg={0.65}>
+                  <Button
+                    onClick={handleOpenUpdateItem}
+                    sx={{
+                      border: "1.5px solid",
+                      borderRadius: "15px",
+                      borderColor: "green",
+                    }}
+                    style={{
+                      marginTop: "20px",
+                      height: "30px",
+                      width: "30px",
+                      fontSize: ".8rem",
+                      fontFamily: "Poppins, sans-serif",
+                      color: "black",
+                      backgroundColor: "white",
+                    }}
+                    variant="outlined"
+                  >
+                    Update
+                  </Button>
+                </Grid>
+                <Grid lg={0.65}>
+                  <Button
+                    onClick={handleOpenDeleteItem}
+                    sx={{
+                      border: "1.5px solid",
+                      borderRadius: "15px",
+                      borderColor: "red",
+                    }}
+                    style={{
+                      marginTop: "20px",
+                      marginLeft: "20px",
+                      height: "30px",
+                      width: "30px",
+                      fontSize: ".8rem",
+                      fontFamily: "Poppins, sans-serif",
+                      color: "black",
+                      backgroundColor: "white",
+                    }}
+                    variant="outlined"
+                  >
+                    Delete
+                  </Button>
                 </Grid>
               </Grid>
             </Paper>

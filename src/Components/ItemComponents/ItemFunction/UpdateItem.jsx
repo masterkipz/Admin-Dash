@@ -1,47 +1,10 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
-import { addItem } from "../../../api/itemApi";
 
-const AddItem = () => {
-  const [item, setItem] = useState({
-    propertyNumber: "",
-    assetClassification: "",
-    brand: "",
-    serialNumber: "",
-    aquisitionCost: 0,
-    aquisitionDate: "",
-    location: "",
-    personAccountable: "",
-  });
+const UpdateItem = () => {
   
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-      try{
-        await addItem(item);
-        setItem({
-          propertyNumber: "",
-          assetClassification: "",
-          brand: "",
-          serialNumber: "",
-          aquisitionCost: 0,
-          aquisitionDate: "",
-          location: "",
-          personAccountable: "",
-        });
-        console.log("Success")
-        window.location.reload();
-      }
-      catch(error){
-        console.log(error.message);
-      }
-    };
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setItem((prevItem) => ({ ...prevItem, [name]: value }));
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div
         style={{
           display: "grid",
@@ -52,8 +15,7 @@ const AddItem = () => {
         <input
           required
           name="propertyNumber"
-          value={item.propertyNumber}
-          onChange={handleChange}
+
           style={{
             margin: "10px",
             gridRow: "1",
@@ -70,8 +32,7 @@ const AddItem = () => {
         <input
           required
           name="assetClassification"
-          value={item.assetClassification}
-          onChange={handleChange}
+
           style={{
             margin: "10px",
             gridRow: "2",
@@ -88,8 +49,7 @@ const AddItem = () => {
         <input
           required
           name="brand"
-          value={item.brand}
-          onChange={handleChange}
+
           style={{
             margin: "10px",
             gridRow: "3",
@@ -106,8 +66,7 @@ const AddItem = () => {
         <input
           required
           name="serialNumber"
-          value={item.serialNumber}
-          onChange={handleChange}
+ 
           style={{
             margin: "10px",
             gridRow: "4",
@@ -125,8 +84,7 @@ const AddItem = () => {
           required
           type="number"
           name="aquisitionCost"
-          value={item.aquisitionCost}
-          onChange={handleChange}
+  
           style={{
             margin: "10px",
             gridRow: "1",
@@ -143,8 +101,7 @@ const AddItem = () => {
         <input
           required
           name="aquisitionDate"
-          value={item.aquisitionDate}
-          onChange={handleChange}
+
           style={{
             margin: "10px",
             gridRow: "2",
@@ -161,8 +118,7 @@ const AddItem = () => {
         <input
           required
           name="location"
-          value={item.location}
-          onChange={handleChange}
+
           style={{
             margin: "10px",
             gridRow: "3",
@@ -179,8 +135,7 @@ const AddItem = () => {
         <input
           required
           name="personAccountable"
-          value={item.personAccountable}
-          onChange={handleChange}
+
           style={{
             margin: "10px",
             gridRow: "4",
@@ -208,13 +163,12 @@ const AddItem = () => {
             fontFamily: "Poppins, sans-serif",
           }}
           type="submit"
-          onClick={handleSubmit}
         >
-          Add Item
+          Update
         </Button>
       </div>
     </form>
   );
 };
 
-export default AddItem;
+export default UpdateItem;

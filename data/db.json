@@ -419,6 +419,96 @@
       "aquisitionDate": "asdas",
       "location": "asdasd",
       "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "67asdsad",
+      "assetClassification": "asdasd",
+      "brand": "asdas",
+      "serialNumber": "asdasd",
+      "aquisitionCost": "12321",
+      "aquisitionDate": "asdas",
+      "location": "asdasd",
+      "personAccountable": "adasd"
+    },
+    {
+      "propertyNumber": "asdasd",
+      "assetClassification": "asdasd",
+      "brand": "asdasd",
+      "serialNumber": "asdasd",
+      "aquisitionCost": "012321",
+      "aquisitionDate": "sadasd",
+      "location": "asdasd",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "qwewqewqe",
+      "assetClassification": "qweqwe",
+      "brand": "qweqwe",
+      "serialNumber": "qweqwe",
+      "aquisitionCost": "012312",
+      "aquisitionDate": "weqweqwe",
+      "location": "qweqwe",
+      "personAccountable": "qweqwe"
+    },
+    {
+      "propertyNumber": "qwewq1",
+      "assetClassification": "qweqwe",
+      "brand": "qweqw",
+      "serialNumber": "qweqwe",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "qweqwe",
+      "location": "qweqw",
+      "personAccountable": "qweqw"
+    },
+    {
+      "propertyNumber": "qweqw13",
+      "assetClassification": "qweqwe",
+      "brand": "qweqwe",
+      "serialNumber": "qwewqe",
+      "aquisitionCost": 0,
+      "aquisitionDate": "qweqw",
+      "location": "eqweqwe",
+      "personAccountable": "qwewq"
+    },
+    {
+      "propertyNumber": "qqweqwe3",
+      "assetClassification": "qweqwe",
+      "brand": "qweqweqweqwe",
+      "serialNumber": "qweqwe",
+      "aquisitionCost": 0,
+      "aquisitionDate": "qwe",
+      "location": "qqew",
+      "personAccountable": "qwewq"
+    },
+    {
+      "propertyNumber": "qwewqe213",
+      "assetClassification": "qwewqe",
+      "brand": "qweqwe",
+      "serialNumber": "qweqwe",
+      "aquisitionCost": 0,
+      "aquisitionDate": "qweqwe",
+      "location": "qwe",
+      "personAccountable": "qweqe"
+    },
+    {
+      "propertyNumber": "123213",
+      "assetClassification": "123213",
+      "brand": "123213",
+      "serialNumber": "123123",
+      "aquisitionCost": "0123213",
+      "aquisitionDate": "123123",
+      "location": "123123",
+      "personAccountable": "12312"
+    },
+    {
+      "propertyNumber": "123123123",
+      "assetClassification": "12312",
+      "brand": "1231",
+      "serialNumber": "123123",
+      "aquisitionCost": "0123123",
+      "aquisitionDate": "123123",
+      "location": "123",
+      "personAccountable": "123123"
     }
   ]
 }
