@@ -1,0 +1,81 @@
+GET http://localhost:3500/users
+
+###
+POST  http://localhost:3500/users
+Content-Type: application/json
+
+{
+    "username":"test",
+    "password":"1234",
+    "roles":["Admin"]
+}
+###
+PATCH http://localhost:3500/users
+Content-Type: application/json
+
+{
+    "id": "63902c8fa279e29a7fdaa4a4",
+    "username": "Hank",
+    "roles": [
+        "Admin"
+    ],
+    "active": true,
+    "__v": 0
+}
+###
+DELETE http://localhost:3500/users
+Content-Type: application/json
+
+{
+    "id": "63902c8fa279e29a7fdaa4a4",
+    "username": "Hank",
+    "roles": [
+        "Admin"
+    ],
+    "active": true,
+    "__v": 0
+}
+###
+GET http://localhost:3500/properties
+###
+
+POST  http://localhost:3500/properties
+Content-Type: application/json
+
+{
+"user":"63902da7a279e29a7fdaa4ac",
+"location": "LCI Laoag City",
+"article": "mouse",
+"serial_no":"LBDHBAAKSMGSGS111",
+"date_acquired": "12-07-2022",
+"date_counted": "12-07-2022",
+"property_num": "lc14",
+"acquisition_cost":"5000",
+"remarks":"Brand New",
+"property_officer": "Brizen Agsalog",
+"coa_representative": "Cliff Tugas"  
+}
+###
+PATCH   http://localhost:3500/properties
+Content-Type: application/json
+
+{
+"id":"6392dd06adc82b326b5aa233",
+"location": "LCI Laoag City",
+"article": "Laptop Computer",
+"serial_no":"LBDHBAAKSM8987",
+"date_acquired": "2022-10-06T16:00:00.000Z",
+"date_counted": "2022-10-06T16:00:00.000Z",
+"property_num": "lc9",
+"acquisition_cost":"35000",
+"remarks":"Brand New",
+"property_officer": "Brizen Agsalog",
+"coa_representative": "Cliff Tugas"
+}
+###
+DELETE http://localhost:3500/properties
+Content-Type: application/json
+
+{
+    "id": "639034defe3d23e537de6ac0"
+}

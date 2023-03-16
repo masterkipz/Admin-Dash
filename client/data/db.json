@@ -1,0 +1,424 @@
+{
+  "items": [
+    {
+      "propertyNumber": "PN-001",
+      "assetClassification": "Laptop",
+      "brand": "Dell",
+      "serialNumber": "S1-001",
+      "aquisitionCost": 50000,
+      "aquisitionDate": "2022-01-01",
+      "location": "Manila",
+      "personAccountable": "John Doe"
+    },
+    {
+      "propertyNumber": "PN-002",
+      "assetClassification": "Desktop",
+      "brand": "HP",
+      "serialNumber": "S1-002",
+      "aquisitionCost": 45000,
+      "aquisitionDate": "2022-01-02",
+      "location": "Quezon City",
+      "personAccountable": "Jane Smith"
+    },
+    {
+      "propertyNumber": "PN-003",
+      "assetClassification": "Smartphone",
+      "brand": "Samsung",
+      "serialNumber": "S1-003",
+      "aquisitionCost": 30000,
+      "aquisitionDate": "2022-01-03",
+      "location": "Makati",
+      "personAccountable": "Robert Garcia"
+    },
+    {
+      "propertyNumber": "PN-004",
+      "assetClassification": "Tablet",
+      "brand": "Apple",
+      "serialNumber": "S1-004",
+      "aquisitionCost": 25000,
+      "aquisitionDate": "2022-01-04",
+      "location": "Taguig",
+      "personAccountable": "Jenny Lim"
+    },
+    {
+      "propertyNumber": "PN-005",
+      "assetClassification": "Laptop",
+      "brand": "Dell",
+      "serialNumber": "S1-005",
+      "aquisitionCost": 35000,
+      "aquisitionDate": "2022-02-10",
+      "location": "Makati",
+      "personAccountable": "John Cruz"
+    },
+    {
+      "propertyNumber": "PN-006",
+      "assetClassification": "Printer",
+      "brand": "Canon",
+      "serialNumber": "S1-006",
+      "aquisitionCost": 15000,
+      "aquisitionDate": "2022-04-20",
+      "location": "Pasig",
+      "personAccountable": "Maria Tan"
+    },
+    {
+      "propertyNumber": "PN-007",
+      "assetClassification": "Printer",
+      "brand": "Canon",
+      "serialNumber": "S1-007",
+      "aquisitionCost": 15000,
+      "aquisitionDate": "2022-04-20",
+      "location": "Pasig",
+      "personAccountable": "Maria Tan"
+    },
+    {
+      "propertyNumber": "PN-008",
+      "assetClassification": "Mobile Phone",
+      "brand": "Samsung",
+      "serialNumber": "S1-008",
+      "aquisitionCost": 20000,
+      "aquisitionDate": "2022-05-25",
+      "location": "Parañaque",
+      "personAccountable": "Mark Reyes"
+    },
+    {
+      "propertyNumber": "PN-009",
+      "assetClassification": "Camera",
+      "brand": "Nikon",
+      "serialNumber": "S1-009",
+      "aquisitionCost": 50000,
+      "aquisitionDate": "2022-06-30",
+      "location": "Mandaluyong",
+      "personAccountable": "Sarah Gomez"
+    },
+    {
+      "propertyNumber": "PN-010",
+      "assetClassification": "CCTV",
+      "brand": "Aluah",
+      "serialNumber": "S1-010",
+      "aquisitionCost": 50000,
+      "aquisitionDate": "2023-06-30",
+      "location": "Ilocos Norte",
+      "personAccountable": "Jane Dave"
+    },
+    {
+      "propertyNumber": "PN-011",
+      "assetClassification": "Laptop",
+      "brand": "Dell",
+      "serialNumber": "S2-011",
+      "aquisitionCost": 70000,
+      "aquisitionDate": "2023-07-01",
+      "location": "Metro Manila",
+      "personAccountable": "John Smith"
+    },
+    {
+      "propertyNumber": "PN-012",
+      "assetClassification": "Printer",
+      "brand": "HP",
+      "serialNumber": "S3-012",
+      "aquisitionCost": 30000,
+      "aquisitionDate": "2023-07-02",
+      "location": "Cebu City",
+      "personAccountable": "Mary Lee"
+    },
+    {
+      "propertyNumber": "PN-013",
+      "assetClassification": "Mobile Phone",
+      "brand": "Samsung",
+      "serialNumber": "S4-013",
+      "aquisitionCost": 35000,
+      "aquisitionDate": "2023-07-03",
+      "location": "Davao City",
+      "personAccountable": "Juan dela Cruz"
+    },
+    {
+      "propertyNumber": "PN-014",
+      "assetClassification": "Server",
+      "brand": "IBM",
+      "serialNumber": "S5-014",
+      "aquisitionCost": 150000,
+      "aquisitionDate": "2023-07-04",
+      "location": "Quezon City",
+      "personAccountable": "Alex Tan"
+    },
+    {
+      "propertyNumber": "PN-015",
+      "assetClassification": "Tablet",
+      "brand": "Apple",
+      "serialNumber": "S6-015",
+      "aquisitionCost": 60000,
+      "aquisitionDate": "2023-07-05",
+      "location": "Baguio City",
+      "personAccountable": "Maria Santos"
+    },
+    {
+      "propertyNumber": "PN-016",
+      "assetClassification": "Projector",
+      "brand": "Epson",
+      "serialNumber": "S7-016",
+      "aquisitionCost": 40000,
+      "aquisitionDate": "2023-07-06",
+      "location": "Batangas City",
+      "personAccountable": "Peter Tan"
+    },
+    {
+      "propertyNumber": "PN-017",
+      "assetClassification": "Scanner",
+      "brand": "Canon",
+      "serialNumber": "S8-017",
+      "aquisitionCost": 25000,
+      "aquisitionDate": "2023-07-07",
+      "location": "Iloilo City",
+      "personAccountable": "Grace Lim"
+    },
+    {
+      "propertyNumber": "PN-018",
+      "assetClassification": "Keyboard",
+      "brand": "Logitech",
+      "serialNumber": "S9-018",
+      "aquisitionCost": 5000,
+      "aquisitionDate": "2023-07-08",
+      "location": "Cagayan de Oro",
+      "personAccountable": "Robert Lee"
+    },
+    {
+      "propertyNumber": "PN-019",
+      "assetClassification": "Keyboard",
+      "brand": "Razer",
+      "serialNumber": "S9-019",
+      "aquisitionCost": 7000,
+      "aquisitionDate": "2023-07-08",
+      "location": "Cagayan de Oro",
+      "personAccountable": "Robert John"
+    },
+    {
+      "propertyNumber": "PN-020",
+      "assetClassification": "Keyboard",
+      "brand": "Red Dragon",
+      "serialNumber": "S9-020",
+      "aquisitionCost": 5000,
+      "aquisitionDate": "2023-07-08",
+      "location": "Cagayan de Oro",
+      "personAccountable": "Robert Rule"
+    },
+    {
+      "propertyNumber": "PN-021",
+      "assetClassification": "Monitor",
+      "brand": "Samsung",
+      "serialNumber": "S9-021",
+      "aquisitionCost": 15000,
+      "aquisitionDate": "2022-12-01",
+      "location": "Manila",
+      "personAccountable": "Juan Dela Cruz"
+    },
+    {
+      "propertyNumber": "PN-022",
+      "assetClassification": "Laptop",
+      "brand": "Asus",
+      "serialNumber": "S9-022",
+      "aquisitionCost": 30000,
+      "aquisitionDate": "2022-11-15",
+      "location": "Cebu",
+      "personAccountable": "Maria Reyes"
+    },
+    {
+      "propertyNumber": "PN-023",
+      "assetClassification": "Headset",
+      "brand": "HyperX",
+      "serialNumber": "S9-023",
+      "aquisitionCost": 7000,
+      "aquisitionDate": "2023-01-20",
+      "location": "Davao",
+      "personAccountable": "Pedro Santos"
+    },
+    {
+      "propertyNumber": "PN-024",
+      "assetClassification": "Mouse",
+      "brand": "Logitech",
+      "serialNumber": "S9-024",
+      "aquisitionCost": 2500,
+      "aquisitionDate": "2022-09-10",
+      "location": "Quezon City",
+      "personAccountable": "Jasmine Lee"
+    },
+    {
+      "propertyNumber": "PN-025",
+      "assetClassification": "Printer",
+      "brand": "Canon",
+      "serialNumber": "S9-025",
+      "aquisitionCost": 10000,
+      "aquisitionDate": "2023-02-05",
+      "location": "Makati",
+      "personAccountable": "David Kim"
+    },
+    {
+      "propertyNumber": "PN-111",
+      "assetClassification": "Laptop",
+      "brand": "Acer",
+      "serialNumber": "SN-111",
+      "aquisitionCost": "10000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Ilocos",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-222",
+      "assetClassification": "Desktop",
+      "brand": "Xitrix",
+      "serialNumber": "SN-222",
+      "aquisitionCost": "20000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Cebu City",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-333",
+      "assetClassification": "Mobile Phone",
+      "brand": "Lenovo",
+      "serialNumber": "SN-333",
+      "aquisitionCost": "5000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Mark Lester"
+    },
+    {
+      "propertyNumber": "PN-444",
+      "assetClassification": "Keyboard",
+      "brand": "Razer",
+      "serialNumber": "SN-444",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-555",
+      "assetClassification": "Mouse",
+      "brand": "Razer",
+      "serialNumber": "SN-555",
+      "aquisitionCost": "20000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Batac",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-666",
+      "assetClassification": "Mic",
+      "brand": "Razer",
+      "serialNumber": "SN-666",
+      "aquisitionCost": "5000",
+      "aquisitionDate": "2023-05-24",
+      "location": "Batac",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-777",
+      "assetClassification": "Mic",
+      "brand": "Lenovo",
+      "serialNumber": "SN-777",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-030",
+      "assetClassification": "Mobile Phone",
+      "brand": "Razer",
+      "serialNumber": "SN-030",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Cebu City",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-040",
+      "assetClassification": "Laptop",
+      "brand": "Razer",
+      "serialNumber": "SN-040",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Cebu City",
+      "personAccountable": "Elmer Gapuzan"
+    },
+    {
+      "propertyNumber": "PN-404",
+      "assetClassification": "Mobile Phone",
+      "brand": "Acer",
+      "serialNumber": "SN-333",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Mark Lester"
+    },
+    {
+      "propertyNumber": "PN-405",
+      "assetClassification": "Mobile",
+      "brand": "Acer",
+      "serialNumber": "SN-305",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "PN-406",
+      "assetClassification": "Mobile",
+      "brand": "Acer",
+      "serialNumber": "SN-306",
+      "aquisitionCost": "1000",
+      "aquisitionDate": "2023-05-25",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "adasd",
+      "assetClassification": "sada",
+      "brand": "zxcxza",
+      "serialNumber": "dsad",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "asdasxz",
+      "location": "asdsa",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "adasdasd",
+      "assetClassification": "sada",
+      "brand": "zxcxza",
+      "serialNumber": "dsad",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "asdasxz",
+      "location": "asdsa",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "adasdasdasd",
+      "assetClassification": "sada",
+      "brand": "zxcxza",
+      "serialNumber": "dsad",
+      "aquisitionCost": "123123",
+      "aquisitionDate": "asdasxz",
+      "location": "asdsa",
+      "personAccountable": "asdasd"
+    },
+    {
+      "propertyNumber": "PN-1231412",
+      "assetClassification": "Laptop",
+      "brand": "Lenovo",
+      "serialNumber": "SN-111",
+      "aquisitionCost": "012312",
+      "aquisitionDate": "2023-05-24",
+      "location": "Laoag",
+      "personAccountable": "Clifford Tugas"
+    },
+    {
+      "propertyNumber": "12312312f",
+      "assetClassification": "asdasd",
+      "brand": "asdasd",
+      "serialNumber": "asdasd",
+      "aquisitionCost": "012321",
+      "aquisitionDate": "asdas",
+      "location": "asdasd",
+      "personAccountable": "asdasd"
+    }
+  ]
+}
