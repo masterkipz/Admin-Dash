@@ -307,28 +307,6 @@
       "date_counted": "2022-12-31",
       "location": "Laoag",
       "person_accountable": "Mark Lester"
-    },
-    {
-      "property_num": "PN-444",
-      "asset_classification": "Keyboard",
-      "item": "Razer",
-      "serial_no": "SN-444",
-      "acquisition_cost": "1000",
-      "date_acquired": "2023-05-25",
-      "date_counted": "2022-12-31",
-      "location": "Laoag",
-      "person_accountable": "Clifford Tugas"
-    },
-    {
-      "property_num": "PN-555",
-      "asset_classification": "Mouse",
-      "item": "Razer",
-      "serial_no": "SN-555",
-      "acquisition_cost": "20000",
-      "date_acquired": "2023-05-24",
-      "date_counted": "2022-12-31",
-      "location": "Batac",
-      "person_accountable": "Clifford Tugas"
     }
   ]
 }
