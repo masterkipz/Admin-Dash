@@ -1,5 +1,5 @@
 const fetchItem = async () => {
-  const response = await fetch("http://localhost:3500/properties");
+  const response = await fetch("http://localhost:3500/items");
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }
@@ -8,7 +8,7 @@ const fetchItem = async () => {
 
 const searchItem = async (searchTerm) => {
   const response = await fetch(
-    `http://localhost:3500/properties?search=${searchTerm}`
+    `http://localhost:3500/items?search=${searchTerm}`
   );
   if (!response.ok) {
     throw new Error("Network response was not ok");
@@ -17,7 +17,7 @@ const searchItem = async (searchTerm) => {
 };
 
 const addItem = async (item) => {
-  const response = await fetch("http://localhost:3500/properties", {
+  const response = await fetch("http://localhost:3500/items", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -29,4 +29,13 @@ const addItem = async (item) => {
   }
 };
 
-export { fetchItem, searchItem, addItem };
+const deleteItem = async (property_num) => {
+  const response = await fetch(`http://localhost:3500/items/${property_num}`, {
+    method: "DELETE",
+  });
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+};
+
+export { fetchItem, searchItem, addItem, deleteItem };
