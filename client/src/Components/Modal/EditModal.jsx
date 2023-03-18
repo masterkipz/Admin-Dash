@@ -18,7 +18,7 @@ const EditModal = (props) => {
             padding: "20px",
             position: "absolute",
             top: "50%",
-            left: "50%",
+            left: "35%",
             transform: "translate(-50%, -50%)",
             borderRadius: "20px",
           }}
@@ -30,9 +30,10 @@ const EditModal = (props) => {
             variant="h4"
             align="center"
           >
-            EDIT ITEM DATA
+            EDIT DATA
           </Typography>
           <form
+            onSubmit={props.handleEditConfirm}
             style={{
               display: "flex",
               flexDirection: "row",
@@ -48,41 +49,36 @@ const EditModal = (props) => {
               }}
             >
               <TextField
-                color="info"
-                id="outlined-basic"
-                label="Property Number"
-                variant="outlined"
-                sx={{ margin: "5px" }}
-              />
-              <TextField
-                id="outlined-basic"
+                value={props.item && props.item.asset_classification}
+                onChange={props.handleEditChange}
                 label="Asset Classification"
                 variant="outlined"
                 sx={{ margin: "5px" }}
+                name="asset_classification"
               />
               <TextField
-                id="outlined-basic"
+                value={props.item && props.item.item}
+                onChange={props.handleEditChange}
                 label="Item Name"
                 variant="outlined"
                 sx={{ margin: "5px" }}
+                name="item"
               />
               <TextField
-                id="outlined-basic"
+                value={props.item && props.item.serial_no}
+                onChange={props.handleEditChange}
                 label="Serial Number"
                 variant="outlined"
                 sx={{ margin: "5px" }}
+                name="serial_no"
               />
               <TextField
-                id="outlined-basic"
+                value={props.item && props.item.acquisition_cost}
+                onChange={props.handleEditChange}
                 label="Acquisition Cost"
                 variant="outlined"
                 sx={{ margin: "5px" }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Date Acquired"
-                variant="outlined"
-                sx={{ margin: "5px" }}
+                name="acquisition_cost"
               />
             </div>
             <div
@@ -93,36 +89,47 @@ const EditModal = (props) => {
               }}
             >
               <TextField
-                id="outlined-basic"
+                value={props.item && props.item.date_acquired}
+                onChange={props.handleEditChange}
+                label="Date Acquired"
+                variant="outlined"
+                sx={{ margin: "5px" }}
+                name="date_acquired"
+              />
+              <TextField
+                value={props.item && props.item.date_counted}
+                onChange={props.handleEditChange}
                 label="Date Counted"
                 variant="outlined"
                 sx={{ margin: "5px" }}
+                name="date_counted"
               />
               <TextField
-                id="outlined-basic"
+                value={props.item && props.item.person_accountable}
+                onChange={props.handleEditChange}
                 label="Person Accountable"
                 variant="outlined"
                 sx={{ margin: "5px" }}
+                name="person_accountable"
               />
               <TextField
-                id="outlined-basic"
-                label="Property Number"
-                variant="outlined"
-                sx={{ margin: "5px" }}
-              />
-              <TextField
+                value={props.item && props.item.location}
+                onChange={props.handleEditChange}
                 id="outlined-basic"
                 label="Location"
                 variant="outlined"
                 sx={{ margin: "5px" }}
+                name="location"
               />
               <Button
+                onClick={props.handleEditConfirm}
                 variant="contained"
                 style={{ backgroundColor: "#0091D5", margin: "5px" }}
               >
                 Save
               </Button>
               <Button
+                onClick={props.handleEditCancel}
                 variant="contained"
                 style={{ backgroundColor: "#EA6A47", margin: "5px" }}
               >

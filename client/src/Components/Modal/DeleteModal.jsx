@@ -17,7 +17,7 @@ function DeleteModal(props) {
             padding: "20px",
             position: "absolute",
             top: "50%",
-            left: "50%",
+            left: "35%",
             transform: "translate(-50%, -50%)",
           }}
         >

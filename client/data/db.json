@@ -2,14 +2,14 @@
   "items": [
     {
       "property_num": "PN-001",
-      "asset_classification": "Laptop",
-      "item": "Dell",
-      "serial_no": "S1-001",
-      "acquisition_cost": 50000,
-      "date_acquired": "2022-01-01",
-      "date_counted": "2022-12-31",
-      "location": "Manila",
-      "person_accountable": "John Doe"
+      "asset_classification": "sad",
+      "item": "asdas",
+      "serial_no": "dsadas",
+      "acquisition_cost": "dasdasd",
+      "date_acquired": "asd",
+      "date_counted": "asdasd",
+      "location": "dasd",
+      "person_accountable": "sadasdas"
     },
     {
       "property_num": "PN-002",

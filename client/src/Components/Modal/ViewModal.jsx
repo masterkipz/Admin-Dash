@@ -39,7 +39,7 @@ function ViewModal(props) {
           sx={{
             position: "absolute",
             top: "50%",
-            left: "50%",
+            left: "35%",
             width: "auto",
             minWidth: "750px",
             height: "auto",

@@ -9,7 +9,7 @@ import {
   Skeleton,
 } from "@mui/material";
 import React from "react";
-import { fetchItem, deleteItem } from "../api/itemApi";
+import { fetchItem, deleteItem, editItem } from "../api/itemApi";
 import { useState } from "react";
 import { useQuery } from "react-query";
 import Edit from "@mui/icons-material/Edit";
@@ -25,6 +25,18 @@ const TableInventory = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [viewModalOpen, setViewModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
+  const [item, setItem] = useState({
+    property_num: "",
+    asset_classification: "",
+    item: "",
+    serial_no: "",
+    acquisition_cost: "",
+    date_acquired: "",
+    date_counted: "",
+    person_accountable: "",
+    location: "",
+  });
+
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
 
   const handleViewClick = (item) => {
@@ -38,13 +50,40 @@ const TableInventory = () => {
     setViewModalOpen(false);
   };
 
-  const handleEditClick = () => {
+  const handleEditClick = (item) => {
+    setItem(item);
     setEditModalOpen(true);
-    console.log(editModalOpen);
+    console.log(item);
   };
 
   const handleEditClose = () => {
+    setItem(null);
     setEditModalOpen(false);
+  };
+
+  const handleEditConfirm = async (event) => {
+    event.preventDefault();
+
+    try {
+      await editItem(item.property_num, item);
+      setItem(null);
+      setEditModalOpen(false);
+      window.location.reload();
+      console.log("Item updated successfully!");
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const handleEditCancel = async (event) => {
+    event.preventDefault();
+    const form = event.target.form;
+    form.reset();
+    console.log("Reset");
+  };
+
+  const handleEditChange = (event) => {
+    setItem({ ...item, [event.target.name]: event.target.value });
   };
 
   const handleDeleteClick = (item) => {
@@ -108,6 +147,9 @@ const TableInventory = () => {
       <EditModal
         editModalOpen={editModalOpen}
         handleEditClose={handleEditClose}
+        handleEditConfirm={handleEditConfirm}
+        handleEditCancel={handleEditCancel}
+        handleEditChange={handleEditChange}
       />
       {/* Delete Modal */}
       <DeleteModal
@@ -136,6 +178,17 @@ const TableInventory = () => {
                     whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
+                  }}
+                  align="left"
+                >
+                  Property Number
+                </TableCell>
+                <TableCell
+                  sx={{
+                    fontWeight: "600",
+                    whiteSpace: "nowrap",
+                    color: "#202020",
+                    width: "17%",
                     "@media (max-width: 600px)": {
                       display: "none",
                     },
@@ -144,17 +197,7 @@ const TableInventory = () => {
                 >
                   Item Brand
                 </TableCell>
-                <TableCell
-                  sx={{
-                    fontWeight: "600",
-                    whiteSpace: "nowrap",
-                    color: "#202020",
-                    width: "17%",
-                  }}
-                  align="left"
-                >
-                  Property Number
-                </TableCell>
+
                 <TableCell
                   sx={{
                     fontWeight: "600",
@@ -212,8 +255,14 @@ const TableInventory = () => {
             </TableHead>
             <TableBody>
               {items &&
-                items.map((item) => (
+                items.slice(0, 10).map((item) => (
                   <TableRow key={item.property_num}>
+                    <TableCell
+                      align="left"
+                      sx={{ whiteSpace: "nowrap", color: "#202020" }}
+                    >
+                      {item.property_num}
+                    </TableCell>
                     <TableCell
                       align="left"
                       sx={{
@@ -226,12 +275,7 @@ const TableInventory = () => {
                     >
                       {item.item}
                     </TableCell>
-                    <TableCell
-                      align="left"
-                      sx={{ whiteSpace: "nowrap", color: "#202020" }}
-                    >
-                      {item.property_num}
-                    </TableCell>
+
                     <TableCell
                       align="left"
                       sx={{
@@ -290,7 +334,7 @@ const TableInventory = () => {
                         <Preview />
                       </button>
                       <button
-                        onClick={handleEditClick}
+                        onClick={() => handleEditClick(item)}
                         style={{
                           height: "30px",
                           width: "30px",

@@ -6,19 +6,22 @@ const fetchItem = async () => {
   return response.json();
 };
 
-const searchItem = async (searchTerm) => {
-  const response = await fetch(
-    `http://localhost:3500/items?search=${searchTerm}`
-  );
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-  return response.json();
-};
-
 const addItem = async (item) => {
   const response = await fetch("http://localhost:3500/items", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(item),
+  });
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+};
+
+const editItem = async (property_num, item) => {
+  const response = await fetch(`http://localhost:3500/items/${property_num}`, {
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
@@ -38,4 +41,4 @@ const deleteItem = async (property_num) => {
   }
 };
 
-export { fetchItem, searchItem, addItem, deleteItem };
+export { fetchItem, addItem, editItem, deleteItem };
