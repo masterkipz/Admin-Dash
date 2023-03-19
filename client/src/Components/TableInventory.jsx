@@ -7,6 +7,7 @@ import {
   TableCell,
   TableBody,
   Skeleton,
+  Box,
 } from "@mui/material";
 import React from "react";
 import { fetchItem, deleteItem, editItem } from "../api/itemApi";
@@ -18,6 +19,7 @@ import Preview from "@mui/icons-material/Preview";
 import EditModal from "./Modal/EditModal";
 import DeleteModal from "./Modal/DeleteModal";
 import ViewModal from "./Modal/ViewModal";
+import PaginationButton from "./Table Navigation/PaginationButton";
 
 const TableInventory = () => {
   const { data: items, isLoading, isError } = useQuery("items", fetchItem);
@@ -373,6 +375,9 @@ const TableInventory = () => {
                   </TableRow>
                 ))}
             </TableBody>
+            <Box>
+              <PaginationButton />
+            </Box>
           </Table>
         </TableContainer>
       </Paper>

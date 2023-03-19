@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import { addItem } from "../../api/itemApi";
 import AddModal from "../Modal/AddModal";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddItemButton = () => {
   const [addModalOpen, setAddModalOpen] = useState(false);
@@ -27,26 +29,61 @@ const AddItemButton = () => {
     setAddModalOpen(false);
   };
 
-  const handleAddItem = async () => {
+  const handleAddItem = async (event) => {
+    event.preventDefault();
+
+    const isFormValid = Object.values(item).every((val) => val !== "");
+    if (!isFormValid) {
+      toast.error("All fields must be filled");
+
+      return;
+    }
     try {
-      await addItem({item});
-      console.log("Item Added");
+      await addItem(item);
+      // reset form
+      setItem({
+        property_num: "",
+        asset_classification: "",
+        item: "",
+        serial_no: "",
+        acquisition_cost: "",
+        date_acquired: "",
+        date_counted: "",
+        person_accountable: "",
+        location: "",
+      });
+      // handle success
+      // Reload web
+      window.location.reload();
+      handleCloseModal();
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      // handle error
     }
   };
 
-  const handleAddChange = (event) => {
-    setItem(event.target.value);
+  const handleAddCancel = async (event) => {
+    event.preventDefault();
+    const form = event.target.form;
+    form.reset();
+    console.log("Reset");
+  };
+
+  const handleAddChange = async (event) => {
+    setItem({
+      ...item,
+      [event.target.name]: event.target.value,
+    });
   };
 
   return (
     <div>
       <AddModal
-      handleAddItem={handleAddItem}
-      handleAddChange={handleAddChange}
+        handleAddItem={handleAddItem}
         handleOpenModal={handleOpenModal}
         handleCloseModal={handleCloseModal}
+        handleAddChange={handleAddChange}
+        handleAddCancel={handleAddCancel}
         addModalOpen={addModalOpen}
       />
       <ButtonBase

@@ -30,7 +30,6 @@ const Layout = () => {
           >
             <AddItemButton />
             <Search />
-            <PaginationButton />
           </Paper>
         </div>
         <div>

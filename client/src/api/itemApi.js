@@ -6,6 +6,15 @@ const fetchItem = async () => {
   return response.json();
 };
 
+const fetchItemTotal = async () => {
+  const response = await fetch("http://localhost:3500/items");
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  const data = await response.json();
+  return data.length;
+};
+
 const addItem = async (item) => {
   const response = await fetch("http://localhost:3500/items", {
     method: "POST",
@@ -41,4 +50,4 @@ const deleteItem = async (property_num) => {
   }
 };
 
-export { fetchItem, addItem, editItem, deleteItem };
+export { fetchItem,fetchItemTotal, addItem, editItem, deleteItem };
