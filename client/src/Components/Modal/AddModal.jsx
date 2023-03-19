@@ -9,7 +9,7 @@ const AddModal = (props) => {
           padding: "20px",
           position: "absolute",
           top: "50%",
-          left: "35%",
+          left: "50%",
           transform: "translate(-50%, -50%)",
           borderRadius: "20px",
         }}

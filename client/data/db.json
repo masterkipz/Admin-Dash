@@ -307,6 +307,39 @@
       "date_counted": "2022-12-31",
       "location": "Laoag",
       "person_accountable": "Mark Lester"
+    },
+    {
+      "property_num": "asdsad",
+      "asset_classification": "asdasd",
+      "item": "asdas",
+      "serial_no": "dasd",
+      "acquisition_cost": "asdsad",
+      "date_acquired": "sadsad",
+      "date_counted": "asdasd",
+      "person_accountable": "asd",
+      "location": "asdsad"
+    },
+    {
+      "property_num": "asdasdd",
+      "asset_classification": "asdasd",
+      "item": "asdas",
+      "serial_no": "dasdasd",
+      "acquisition_cost": "asdasd",
+      "date_acquired": "asdasd",
+      "date_counted": "asdasd",
+      "person_accountable": "asd",
+      "location": "asdsad"
+    },
+    {
+      "property_num": "asdasd",
+      "asset_classification": "qwewq",
+      "item": "asdsa",
+      "serial_no": "dqwewqe",
+      "acquisition_cost": "sadsad",
+      "date_acquired": "asdasd",
+      "date_counted": "qwewq",
+      "person_accountable": "wqeqwe",
+      "location": "asds"
     }
   ]
 }

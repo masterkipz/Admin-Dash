@@ -39,7 +39,7 @@ function ViewModal(props) {
           sx={{
             position: "absolute",
             top: "50%",
-            left: "35%",
+            left: "50%",
             width: "auto",
             minWidth: "750px",
             height: "auto",
@@ -96,7 +96,7 @@ function ViewModal(props) {
               </Typography>
             </Box>
             <Box>
-              <ThemeProvider theme={theme}>
+            <ThemeProvider theme={theme}>
                 <TableContainer
                   component={Paper}
                   sx={{

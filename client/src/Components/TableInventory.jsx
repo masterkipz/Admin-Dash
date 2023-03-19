@@ -38,13 +38,18 @@ const TableInventory = () => {
     person_accountable: "",
     location: "",
   });
-
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+
+  //Pagination Functionality
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemPerPage] = useState(10);
+
+  const indexOfLastItem = currentPage * itemPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemPerPage;
 
   const handleViewClick = (item) => {
     setSelectedItem(item);
     setViewModalOpen(true);
-    console.log(item);
   };
 
   const handleCloseModal = () => {
@@ -55,7 +60,6 @@ const TableInventory = () => {
   const handleEditClick = (item) => {
     setItem(item);
     setEditModalOpen(true);
-    console.log(item);
   };
 
   const handleEditClose = () => {
@@ -71,17 +75,13 @@ const TableInventory = () => {
       setItem(null);
       setEditModalOpen(false);
       window.location.reload();
-      console.log("Item updated successfully!");
-    } catch (error) {
-      console.error(error.message);
-    }
+    } catch (error) {}
   };
 
   const handleEditCancel = async (event) => {
     event.preventDefault();
     const form = event.target.form;
     form.reset();
-    console.log("Reset");
   };
 
   const handleEditChange = (event) => {
@@ -91,7 +91,6 @@ const TableInventory = () => {
   const handleDeleteClick = (item) => {
     setSelectedItem(item);
     setDeleteModalOpen(true);
-    console.log(item);
   };
 
   const handleDeleteConfirm = async () => {
@@ -101,16 +100,12 @@ const TableInventory = () => {
       setDeleteModalOpen(false);
       setSelectedItem(null);
       window.location.reload();
-      console.log("Success");
-    } catch (error) {
-      console.error("Error deleting item: ", error);
-    }
+    } catch (error) {}
   };
 
   const handleDeleteCancel = async () => {
     setSelectedItem(null);
     setDeleteModalOpen(false);
-    console.log("Cancel");
   };
 
   if (isLoading) {
@@ -257,7 +252,7 @@ const TableInventory = () => {
             </TableHead>
             <TableBody>
               {items &&
-                items.slice(0, 10).map((item) => (
+                items.slice(indexOfFirstItem, indexOfLastItem).map((item) => (
                   <TableRow key={item.property_num}>
                     <TableCell
                       align="left"
@@ -375,11 +370,14 @@ const TableInventory = () => {
                   </TableRow>
                 ))}
             </TableBody>
-            <Box>
-              <PaginationButton />
-            </Box>
           </Table>
         </TableContainer>
+        <Box>
+          <PaginationButton
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </Box>
       </Paper>
     </>
   );

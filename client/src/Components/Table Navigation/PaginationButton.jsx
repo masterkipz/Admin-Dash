@@ -4,7 +4,7 @@ import { fetchItemTotal } from "../../api/itemApi";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const PaginationButton = () => {
+const PaginationButton = (props) => {
   const [pageTotal, setPageTotal] = useState(0);
 
   useEffect(() => {
@@ -15,11 +15,15 @@ const PaginationButton = () => {
     fetchData();
   }, []);
 
-  const totalPages = Math.floor(pageTotal / 10);
+  const totalPages = Math.ceil(pageTotal / 10);
+
+  const handlePageChange = (event, value) => {
+      props.setCurrentPage(value);
+  };
 
   return (
     <div style={{ marginLeft: "20px", marginTop: "10px" }}>
-      <Pagination count={totalPages} />
+      <Pagination count={totalPages} page={props.currentPage} onChange={handlePageChange} />
     </div>
   );
 };
