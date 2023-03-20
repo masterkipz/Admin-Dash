@@ -21,9 +21,8 @@ import DeleteModal from "./Modal/DeleteModal";
 import ViewModal from "./Modal/ViewModal";
 import PaginationButton from "./Table Navigation/PaginationButton";
 
-const TableInventory = () => {
+const TableInventory = (props) => {
   const { data: items, isLoading, isError } = useQuery("items", fetchItem);
-
   const [selectedItem, setSelectedItem] = useState(null);
   const [viewModalOpen, setViewModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
@@ -163,7 +162,12 @@ const TableInventory = () => {
       />
 
       <Paper
-        sx={{ borderRadius: "10", padding: "20px", backgroundColor: "#F1F1F1" }}
+        sx={{
+          marginBottom: "10px",
+          borderRadius: "10",
+          padding: "20px",
+          backgroundColor: "#F1F1F1",
+        }}
       >
         <TableContainer>
           <Table>
@@ -172,7 +176,6 @@ const TableInventory = () => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
                   }}
@@ -183,10 +186,9 @@ const TableInventory = () => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
-                    "@media (max-width: 600px)": {
+                    "@media (max-width: 650px)": {
                       display: "none",
                     },
                   }}
@@ -198,10 +200,9 @@ const TableInventory = () => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
-                    "@media (max-width: 600px)": {
+                    "@media (max-width: 650px)": {
                       display: "none",
                     },
                   }}
@@ -212,10 +213,12 @@ const TableInventory = () => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
-                    "@media (max-width: 600px)": {
+                    "@media (max-width: 650px)": {
+                      display: "none",
+                    },
+                    "@media (max-width: 770px)": {
                       display: "none",
                     },
                   }}
@@ -226,10 +229,12 @@ const TableInventory = () => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
-                    "@media (max-width: 600px)": {
+                    "@media (max-width: 650px)": {
+                      display: "none",
+                    },
+                    "@media (max-width: 980px)": {
                       display: "none",
                     },
                   }}
@@ -240,7 +245,6 @@ const TableInventory = () => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    whiteSpace: "nowrap",
                     color: "#202020",
                     width: "17%",
                   }}
@@ -251,124 +255,248 @@ const TableInventory = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {items &&
-                items.slice(indexOfFirstItem, indexOfLastItem).map((item) => (
-                  <TableRow key={item.property_num}>
-                    <TableCell
-                      align="left"
-                      sx={{ whiteSpace: "nowrap", color: "#202020" }}
-                    >
-                      {item.property_num}
-                    </TableCell>
-                    <TableCell
-                      align="left"
-                      sx={{
-                        whiteSpace: "nowrap",
-                        color: "#202020",
-                        "@media (max-width:600px)": {
-                          display: "none",
-                        },
-                      }}
-                    >
-                      {item.item}
-                    </TableCell>
+              {props.searchResults.length > 0
+                ? props.searchResults
+                    .slice(indexOfFirstItem, indexOfLastItem)
+                    .map((item) => (
+                      <TableRow key={item.property_num}>
+                        <TableCell align="left" sx={{ color: "#202020" }}>
+                          {item.property_num}
+                        </TableCell>
+                        <TableCell
+                          align="left"
+                          sx={{
+                            color: "#202020",
+                            "@media (max-width:650px)": {
+                              display: "none",
+                            },
+                          }}
+                        >
+                          {item.item}
+                        </TableCell>
 
-                    <TableCell
-                      align="left"
-                      sx={{
-                        whiteSpace: "nowrap",
-                        color: "#202020",
-                        "@media (max-width:600px)": {
-                          display: "none",
-                        },
-                      }}
-                    >
-                      {item.asset_classification}
-                    </TableCell>
-                    <TableCell
-                      align="left"
-                      sx={{
-                        whiteSpace: "nowrap",
-                        color: "#202020",
-                        "@media (max-width:600px)": {
-                          display: "none",
-                        },
-                      }}
-                    >
-                      {item.serial_no}
-                    </TableCell>
+                        <TableCell
+                          align="left"
+                          sx={{
+                            color: "#202020",
+                            "@media (max-width:650px)": {
+                              display: "none",
+                            },
+                          }}
+                        >
+                          {item.asset_classification}
+                        </TableCell>
+                        <TableCell
+                          align="left"
+                          sx={{
+                            color: "#202020",
+                            "@media (max-width:650px)": {
+                              display: "none",
+                            },
+                            "@media (max-width: 770px)": {
+                              display: "none",
+                            },
+                          }}
+                        >
+                          {item.serial_no}
+                        </TableCell>
 
-                    <TableCell
-                      align="left"
-                      sx={{
-                        whiteSpace: "nowrap",
-                        color: "#202020",
-                        "@media (max-width:600px)": {
-                          display: "none",
-                        },
-                      }}
-                    >
-                      {item.person_accountable}
-                    </TableCell>
+                        <TableCell
+                          align="left"
+                          sx={{
+                            color: "#202020",
+                            "@media (max-width:650px)": {
+                              display: "none",
+                            },
+                            "@media (max-width: 980px)": {
+                              display: "none",
+                            },
+                            "@media (max-width: 770px)": {
+                              display: "none",
+                            },
+                          }}
+                        >
+                          {item.person_accountable}
+                        </TableCell>
 
-                    <TableCell align="center">
-                      <button
-                        onClick={() => handleViewClick(item)}
-                        style={{
-                          height: "30px",
-                          width: "30px",
-                          backgroundColor: "#EA6A47",
-                          border: "none",
-                          color: "#F1F1F1",
-                          borderRadius: "5px",
-                          padding: "0px ",
-                          paddingTop: "3px",
-                          cursor: "pointer",
-                          marginLeft: "2px",
-                          marginRight: "2px",
+                        <TableCell align="center">
+                          <button
+                            onClick={() => handleViewClick(item)}
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              backgroundColor: "#EA6A47",
+                              border: "none",
+                              color: "#F1F1F1",
+                              borderRadius: "5px",
+                              padding: "0px ",
+                              paddingTop: "3px",
+                              cursor: "pointer",
+                              marginLeft: "2px",
+                              marginRight: "2px",
+                            }}
+                          >
+                            <Preview />
+                          </button>
+                          <button
+                            onClick={() => handleEditClick(item)}
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              backgroundColor: "#EA6A47",
+                              border: "none",
+                              color: "#F1F1F1",
+                              borderRadius: "5px",
+                              padding: "0px ",
+                              paddingTop: "3px",
+                              cursor: "pointer",
+                              marginLeft: "2px",
+                              marginRight: "2px",
+                            }}
+                          >
+                            <Edit />
+                          </button>
+                          <button
+                            onClick={() => handleDeleteClick(item)}
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              backgroundColor: "#EA6A47",
+                              border: "none",
+                              color: "#F1F1F1",
+                              borderRadius: "5px",
+                              padding: "0px ",
+                              paddingTop: "3px",
+                              cursor: "pointer",
+                              marginLeft: "2px",
+                              marginRight: "2px",
+                            }}
+                          >
+                            <Delete />
+                          </button>
+                        </TableCell>
+                      </TableRow>
+                    ))
+                : items &&
+                  items.slice(indexOfFirstItem, indexOfLastItem).map((item) => (
+                    <TableRow key={item.property_num}>
+                      <TableCell align="left" sx={{ color: "#202020" }}>
+                        {item.property_num}
+                      </TableCell>
+                      <TableCell
+                        align="left"
+                        sx={{
+                          color: "#202020",
+                          "@media (max-width:650px)": {
+                            display: "none",
+                          },
                         }}
                       >
-                        <Preview />
-                      </button>
-                      <button
-                        onClick={() => handleEditClick(item)}
-                        style={{
-                          height: "30px",
-                          width: "30px",
-                          backgroundColor: "#EA6A47",
-                          border: "none",
-                          color: "#F1F1F1",
-                          borderRadius: "5px",
-                          padding: "0px ",
-                          paddingTop: "3px",
-                          cursor: "pointer",
-                          marginLeft: "2px",
-                          marginRight: "2px",
+                        {item.item}
+                      </TableCell>
+
+                      <TableCell
+                        align="left"
+                        sx={{
+                          color: "#202020",
+                          "@media (max-width:650px)": {
+                            display: "none",
+                          },
                         }}
                       >
-                        <Edit />
-                      </button>
-                      <button
-                        onClick={() => handleDeleteClick(item)}
-                        style={{
-                          height: "30px",
-                          width: "30px",
-                          backgroundColor: "#EA6A47",
-                          border: "none",
-                          color: "#F1F1F1",
-                          borderRadius: "5px",
-                          padding: "0px ",
-                          paddingTop: "3px",
-                          cursor: "pointer",
-                          marginLeft: "2px",
-                          marginRight: "2px",
+                        {item.asset_classification}
+                      </TableCell>
+                      <TableCell
+                        align="left"
+                        sx={{
+                          color: "#202020",
+                          "@media (max-width:650px)": {
+                            display: "none",
+                          },
+                          "@media (max-width: 770px)": {
+                            display: "none",
+                          },
                         }}
                       >
-                        <Delete />
-                      </button>
-                    </TableCell>
-                  </TableRow>
-                ))}
+                        {item.serial_no}
+                      </TableCell>
+
+                      <TableCell
+                        align="left"
+                        sx={{
+                          color: "#202020",
+                          "@media (max-width:650px)": {
+                            display: "none",
+                          },
+                          "@media (max-width: 980px)": {
+                            display: "none",
+                          },
+                          "@media (max-width: 770px)": {
+                            display: "none",
+                          },
+                        }}
+                      >
+                        {item.person_accountable}
+                      </TableCell>
+
+                      <TableCell align="center">
+                        <button
+                          onClick={() => handleViewClick(item)}
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            backgroundColor: "#EA6A47",
+                            border: "none",
+                            color: "#F1F1F1",
+                            borderRadius: "5px",
+                            padding: "0px ",
+                            paddingTop: "3px",
+                            cursor: "pointer",
+                            marginLeft: "2px",
+                            marginRight: "2px",
+                          }}
+                        >
+                          <Preview />
+                        </button>
+                        <button
+                          onClick={() => handleEditClick(item)}
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            backgroundColor: "#EA6A47",
+                            border: "none",
+                            color: "#F1F1F1",
+                            borderRadius: "5px",
+                            padding: "0px ",
+                            paddingTop: "3px",
+                            cursor: "pointer",
+                            marginLeft: "2px",
+                            marginRight: "2px",
+                          }}
+                        >
+                          <Edit />
+                        </button>
+                        <button
+                          onClick={() => handleDeleteClick(item)}
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            backgroundColor: "#EA6A47",
+                            border: "none",
+                            color: "#F1F1F1",
+                            borderRadius: "5px",
+                            padding: "0px ",
+                            paddingTop: "3px",
+                            cursor: "pointer",
+                            marginLeft: "2px",
+                            marginRight: "2px",
+                          }}
+                        >
+                          <Delete />
+                        </button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
             </TableBody>
           </Table>
         </TableContainer>

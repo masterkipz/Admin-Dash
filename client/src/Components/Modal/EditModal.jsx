@@ -15,6 +15,7 @@ const EditModal = (props) => {
       <Modal open={props.editModalOpen} onClose={props.handleEditClose}>
         <Paper
           sx={{
+            backgroundColor:"#F1F1F1",
             padding: "20px",
             position: "absolute",
             top: "50%",

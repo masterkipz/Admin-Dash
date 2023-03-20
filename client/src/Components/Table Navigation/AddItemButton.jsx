@@ -22,7 +22,6 @@ const AddItemButton = () => {
 
   const handleOpenModal = () => {
     setAddModalOpen(true);
-    console.log(addModalOpen);
   };
 
   const handleCloseModal = () => {
@@ -35,9 +34,9 @@ const AddItemButton = () => {
     const isFormValid = Object.values(item).every((val) => val !== "");
     if (!isFormValid) {
       toast.error("All fields must be filled");
-
       return;
     }
+
     try {
       await addItem(item);
       // reset form

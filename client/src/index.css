@@ -1,4 +1,10 @@
-body{
+body {
   margin: 0;
-  background-color: #7E909A;
+  background-color: #7e909a;
+}
+
+.text-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

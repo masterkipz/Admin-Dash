@@ -14,6 +14,7 @@ function DeleteModal(props) {
       <Modal open={props.deleteModalOpen} onClose={props.handleDeleteCancel}>
         <Paper
           sx={{
+            backgroundColor:"#F1F1F1",
             padding: "20px",
             position: "absolute",
             top: "50%",

@@ -2,8 +2,8 @@
   "items": [
     {
       "property_num": "PN-001",
-      "asset_classification": "qwewqe",
-      "item": "qweqwewqe",
+      "asset_classification": "asdasdas",
+      "item": "asdasdasd",
       "serial_no": "asds",
       "acquisition_cost": "dasdasd",
       "date_acquired": "asd",
@@ -340,6 +340,17 @@
       "date_counted": "qwewq",
       "person_accountable": "wqeqwe",
       "location": "asds"
+    },
+    {
+      "property_num": "asdasda",
+      "asset_classification": "asdsad",
+      "item": "asdasd",
+      "serial_no": "asdasd",
+      "acquisition_cost": "asdasd",
+      "date_acquired": "asdasd",
+      "date_counted": "asdasd",
+      "person_accountable": "asdasd",
+      "location": "asdsad"
     }
   ]
 }

@@ -6,12 +6,15 @@ const AddModal = (props) => {
     <Modal open={props.addModalOpen} onClose={props.handleCloseModal}>
       <Paper
         sx={{
+          backgroundColor: "#F1F1F1",
           padding: "20px",
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           borderRadius: "20px",
+          "@media (max-width:600px)":{
+          }
         }}
       >
         <Typography

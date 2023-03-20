@@ -19,15 +19,15 @@ const Navbar = () => {
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!isDrawerOpen);
-    console.log(isDrawerOpen);
   };
 
   return (
     <Container
       sx={{ display: "flex" }}
-      maxWidth=""
+      maxWidth="100%"
       style={{
-        maxWidth: "100vw",
+        zIndex: "10",
+        minWidth: "375px",
         position: "fixed",
         top: "0",
         left: "0",
@@ -143,7 +143,7 @@ const Navbar = () => {
               color: "#F1F1F1",
               fontSize: "48px",
               "@media (max-width:530px)": {
-                fontSize:"30px"
+                fontSize: "30px",
               },
             }}
           >
