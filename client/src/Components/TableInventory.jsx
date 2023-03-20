@@ -166,7 +166,7 @@ const TableInventory = (props) => {
           marginBottom: "10px",
           borderRadius: "10",
           padding: "20px",
-          backgroundColor: "#F1F1F1",
+          backgroundColor: "#F0F0F0",
         }}
       >
         <TableContainer>
@@ -176,8 +176,11 @@ const TableInventory = (props) => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    color: "#202020",
+                    color: "#041C32",
                     width: "17%",
+                    "@media (max-width:600px)": {
+                      width: "13%",
+                    }
                   }}
                   align="left"
                 >
@@ -186,7 +189,7 @@ const TableInventory = (props) => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    color: "#202020",
+                    color: "#041C32",
                     width: "17%",
                     "@media (max-width: 650px)": {
                       display: "none",
@@ -200,7 +203,7 @@ const TableInventory = (props) => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    color: "#202020",
+                    color: "#041C32",
                     width: "17%",
                     "@media (max-width: 650px)": {
                       display: "none",
@@ -213,7 +216,7 @@ const TableInventory = (props) => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    color: "#202020",
+                    color: "#041C32",
                     width: "17%",
                     "@media (max-width: 650px)": {
                       display: "none",
@@ -229,7 +232,7 @@ const TableInventory = (props) => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    color: "#202020",
+                    color: "#041C32",
                     width: "17%",
                     "@media (max-width: 650px)": {
                       display: "none",
@@ -245,7 +248,7 @@ const TableInventory = (props) => {
                 <TableCell
                   sx={{
                     fontWeight: "600",
-                    color: "#202020",
+                    color: "#041C32",
                     width: "17%",
                   }}
                   align="center"
@@ -260,13 +263,13 @@ const TableInventory = (props) => {
                     .slice(indexOfFirstItem, indexOfLastItem)
                     .map((item) => (
                       <TableRow key={item.property_num}>
-                        <TableCell align="left" sx={{ color: "#202020" }}>
+                        <TableCell align="left" sx={{ color: "#041C32" }}>
                           {item.property_num}
                         </TableCell>
                         <TableCell
                           align="left"
                           sx={{
-                            color: "#202020",
+                            color: "#041C32",
                             "@media (max-width:650px)": {
                               display: "none",
                             },
@@ -278,7 +281,7 @@ const TableInventory = (props) => {
                         <TableCell
                           align="left"
                           sx={{
-                            color: "#202020",
+                            color: "#041C32",
                             "@media (max-width:650px)": {
                               display: "none",
                             },
@@ -289,7 +292,7 @@ const TableInventory = (props) => {
                         <TableCell
                           align="left"
                           sx={{
-                            color: "#202020",
+                            color: "#041C32",
                             "@media (max-width:650px)": {
                               display: "none",
                             },
@@ -304,7 +307,7 @@ const TableInventory = (props) => {
                         <TableCell
                           align="left"
                           sx={{
-                            color: "#202020",
+                            color: "#041C32",
                             "@media (max-width:650px)": {
                               display: "none",
                             },
@@ -325,9 +328,9 @@ const TableInventory = (props) => {
                             style={{
                               height: "30px",
                               width: "30px",
-                              backgroundColor: "#EA6A47",
+                              backgroundColor: "#041C32",
                               border: "none",
-                              color: "#F1F1F1",
+                              color: "#F0F0F0",
                               borderRadius: "5px",
                               padding: "0px ",
                               paddingTop: "3px",
@@ -343,10 +346,10 @@ const TableInventory = (props) => {
                             style={{
                               height: "30px",
                               width: "30px",
-                              backgroundColor: "#EA6A47",
+                              backgroundColor: "#041C32",
                               border: "none",
-                              color: "#F1F1F1",
-                              borderRadius: "5px",
+                              color: "#F0F0F0",
+                              borderRadius: "4px",
                               padding: "0px ",
                               paddingTop: "3px",
                               cursor: "pointer",
@@ -361,9 +364,9 @@ const TableInventory = (props) => {
                             style={{
                               height: "30px",
                               width: "30px",
-                              backgroundColor: "#EA6A47",
+                              backgroundColor: "#041C32",
                               border: "none",
-                              color: "#F1F1F1",
+                              color: "#F0F0F0",
                               borderRadius: "5px",
                               padding: "0px ",
                               paddingTop: "3px",
@@ -380,13 +383,13 @@ const TableInventory = (props) => {
                 : items &&
                   items.slice(indexOfFirstItem, indexOfLastItem).map((item) => (
                     <TableRow key={item.property_num}>
-                      <TableCell align="left" sx={{ color: "#202020" }}>
+                      <TableCell align="left" sx={{ color: "#041C32" }}>
                         {item.property_num}
                       </TableCell>
                       <TableCell
                         align="left"
                         sx={{
-                          color: "#202020",
+                          color: "#041C32",
                           "@media (max-width:650px)": {
                             display: "none",
                           },
@@ -398,7 +401,7 @@ const TableInventory = (props) => {
                       <TableCell
                         align="left"
                         sx={{
-                          color: "#202020",
+                          color: "#041C32",
                           "@media (max-width:650px)": {
                             display: "none",
                           },
@@ -409,7 +412,7 @@ const TableInventory = (props) => {
                       <TableCell
                         align="left"
                         sx={{
-                          color: "#202020",
+                          color: "#041C32",
                           "@media (max-width:650px)": {
                             display: "none",
                           },
@@ -424,7 +427,7 @@ const TableInventory = (props) => {
                       <TableCell
                         align="left"
                         sx={{
-                          color: "#202020",
+                          color: "#041C32",
                           "@media (max-width:650px)": {
                             display: "none",
                           },
@@ -445,9 +448,9 @@ const TableInventory = (props) => {
                           style={{
                             height: "30px",
                             width: "30px",
-                            backgroundColor: "#EA6A47",
+                            backgroundColor: "#041C32",
                             border: "none",
-                            color: "#F1F1F1",
+                            color: "#F0F0F0",
                             borderRadius: "5px",
                             padding: "0px ",
                             paddingTop: "3px",
@@ -463,9 +466,9 @@ const TableInventory = (props) => {
                           style={{
                             height: "30px",
                             width: "30px",
-                            backgroundColor: "#EA6A47",
+                            backgroundColor: "#041C32",
                             border: "none",
-                            color: "#F1F1F1",
+                            color: "#F0F0F0",
                             borderRadius: "5px",
                             padding: "0px ",
                             paddingTop: "3px",
@@ -481,9 +484,9 @@ const TableInventory = (props) => {
                           style={{
                             height: "30px",
                             width: "30px",
-                            backgroundColor: "#EA6A47",
+                            backgroundColor: "#041C32",
                             border: "none",
-                            color: "#F1F1F1",
+                            color: "#F0F0F0",
                             borderRadius: "5px",
                             padding: "0px ",
                             paddingTop: "3px",

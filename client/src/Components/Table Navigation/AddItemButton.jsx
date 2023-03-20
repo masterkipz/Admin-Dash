@@ -90,13 +90,13 @@ const AddItemButton = () => {
         sx={{
           height: "40px",
           width: "80px",
-          backgroundColor: "#EA6A47",
+          backgroundColor: "#F0F0F0",
           padding: "4px",
           borderRadius: "5px",
           marginLeft: "30px",
         }}
       >
-        <Typography sx={{ color: "#F1F1F1" }}>Add Item</Typography>
+        <Typography sx={{ color: "#041C32", fontWeight:"bold" }}>Add Item</Typography>
       </ButtonBase>
     </div>
   );

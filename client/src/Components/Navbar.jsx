@@ -33,17 +33,17 @@ const Navbar = () => {
         left: "0",
         right: "0",
         height: "80px",
-        backgroundColor: "#1C4E80",
+        backgroundColor: "#041C32",
       }}
     >
       <IconButton onClick={handleDrawerToggle} sx={{ borderRadius: 0 }}>
-        <MenuIcon fontSize="large" sx={{ color: "#F1F1F1" }} />
+        <MenuIcon fontSize="large" sx={{ color: "#F0F0F0" }} />
       </IconButton>
 
       <Drawer
         PaperProps={{
           style: {
-            backgroundColor: "#1C4E80",
+            backgroundColor: "#041C32",
             width: "240px",
           },
         }}
@@ -70,7 +70,7 @@ const Navbar = () => {
           <Box display="flex" flexDirection="column" alignItems="flex-start">
             <ButtonBase
               sx={{
-                color: "#F1F1F1",
+                color: "#F0F0F0",
                 marginBottom: "20px",
               }}
             >
@@ -88,7 +88,7 @@ const Navbar = () => {
             </ButtonBase>
             <ButtonBase
               sx={{
-                color: "#F1F1F1",
+                color: "#F0F0F0",
                 marginBottom: "20px",
               }}
             >
@@ -109,7 +109,7 @@ const Navbar = () => {
             </ButtonBase>
             <ButtonBase
               sx={{
-                color: "#F1F1F1",
+                color: "#F0F0F0",
                 marginBottom: "20px",
               }}
             >
@@ -140,8 +140,9 @@ const Navbar = () => {
         <Box>
           <Typography
             sx={{
-              color: "#F1F1F1",
+              color: "#F0F0F0",
               fontSize: "48px",
+              fontWeight:"bold",
               "@media (max-width:530px)": {
                 fontSize: "30px",
               },

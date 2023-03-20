@@ -8,7 +8,6 @@ const Search = (props) => {
 
   //Search Functionality
   const handleSearchInputChange = async (event) => {
-    props.setPageTotal(0)
     const query = event.target.value;
     setSearchQuery(query);
     const data = await searchItem(query);
@@ -28,7 +27,18 @@ const Search = (props) => {
         placeholder="Search Item..."
         variant="outlined"
         size="small"
-        style={{ maxWidth: "300px", marginLeft: "20px", marginRight: "10px" }}
+        sx={{
+          maxWidth: "300px",
+          marginLeft: "20px",
+          marginRight: "30px",
+          "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+            {
+              borderColor: "#F0F0F0",
+            },
+          "&  .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#F0F0F0",
+          },
+        }}
       />
     </div>
   );
