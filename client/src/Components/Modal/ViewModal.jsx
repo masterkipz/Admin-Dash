@@ -48,7 +48,7 @@ function ViewModal(props) {
             borderRadius: "10px",
             boxShadow: 24,
             p: 3,
-            backgroundColor: "#1C4E80",
+            backgroundColor: "#041C32",
             "@media (max-width: 600px)": {
               height: "500px",
               width: "300px",
@@ -60,7 +60,7 @@ function ViewModal(props) {
             align="center"
             variant="h4"
             sx={{
-              color: "#F1F1F1",
+              color: "#F0F0F0",
               fontWeight: "800",
               "@media (max-width: 600px)": { fontSize: "24px" },
             }}
@@ -89,7 +89,7 @@ function ViewModal(props) {
                   fontStyle: "italic",
                   fontSize: "14px",
                   textAlign: "center",
-                  color: "#F1F1F1",
+                  color: "#F0F0F0",
                 }}
               >
                 Tampering the data of this inventory is punishable by the law
@@ -100,7 +100,7 @@ function ViewModal(props) {
                 <TableContainer
                   component={Paper}
                   sx={{
-                    backgroundColor: "#F1F1F1",
+                    backgroundColor: "#F0F0F0",
                     "@media (max-width: 600px)": {
                       width: "300px",
                       height: "auto",
@@ -110,7 +110,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -120,7 +120,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -131,7 +131,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -141,7 +141,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -153,7 +153,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -163,7 +163,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -174,7 +174,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -184,7 +184,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -195,7 +195,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -205,7 +205,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -217,7 +217,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -227,7 +227,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -238,7 +238,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -248,7 +248,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -259,7 +259,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -269,7 +269,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}
@@ -281,7 +281,7 @@ function ViewModal(props) {
                   <TableRow>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontWeight: "600",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
@@ -291,7 +291,7 @@ function ViewModal(props) {
                     </TableCell>
                     <TableCell
                       sx={{
-                        color: "#202020",
+                        color: "#041C32",
                         fontSize: "17px",
                         "@media (max-width:600px)": { fontSize: "14px" },
                       }}

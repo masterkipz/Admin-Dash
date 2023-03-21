@@ -9,7 +9,7 @@ const FormInvalid = () => {
           padding: "20px",
           position: "absolute",
           top: "50%",
-          left: "50%",
+          left: "40%",
           transform: "translate(-50%, -50%)",
           borderRadius: "20px",
         }}

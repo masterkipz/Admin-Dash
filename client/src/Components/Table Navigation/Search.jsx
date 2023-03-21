@@ -20,6 +20,8 @@ const Search = (props) => {
   return (
     <div>
       <TextField
+        InputLabelProps={{ style: { color: "#F0F0F0" } }}
+        InputProps={{ style: { color: "#F0F0F0" } }}
         value={searchQuery}
         onChange={handleSearchInputChange}
         id="search-input"
@@ -37,6 +39,11 @@ const Search = (props) => {
             },
           "&  .MuiOutlinedInput-notchedOutline": {
             borderColor: "#F0F0F0",
+          },
+          "& .MuiOutlinedInput-root": {
+            "&:hover fieldset": {
+              borderColor: "#F0F0F0",
+            },
           },
         }}
       />
