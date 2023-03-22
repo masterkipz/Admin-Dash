@@ -1,4 +1,26 @@
 {
+  "user": [
+    {
+      "id": "0",
+      "username": "clifford",
+      "password": "superadmin",
+      "role": "superadmin"
+    },
+    {
+      "id": "1",
+      "username": "elmer",
+      "password": "elmer",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "username": "mark",
+      "password": "mark",
+      "role": "user"
+    }
+  ],
+
+  
   "items": [
     {
       "property_num": "PN-001",

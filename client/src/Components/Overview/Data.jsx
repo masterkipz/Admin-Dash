@@ -5,6 +5,7 @@ function Data() {
   return (
     <Paper
       sx={{
+        backgroundColor:"#F0F0F0",
         height: "320px",
         width: "100%",
         marginTop: "30px",

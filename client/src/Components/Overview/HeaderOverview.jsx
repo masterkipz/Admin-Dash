@@ -13,7 +13,7 @@ function HeaderOverview() {
         alignItems: "center",
       }}
     >
-      <Typography variant="h3" color="white" fontWeight="bold">
+      <Typography variant="h3" color="#F0F0F0" fontWeight="bold">
         Data Overview
       </Typography>
     </Paper>

@@ -10,9 +10,44 @@ import dictLogoWhite from "../.././Images/DICT-Logo-White.png";
 import React from "react";
 import { useState } from "react";
 import ForgotPasswordModal from "../Modal/ForgotPasswordModal";
+import { useNavigate } from "react-router-dom";
+import { fetchUser } from "../../api/userApi";
+import { useQuery } from "react-query";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
+  const { data: user } = useQuery("user", fetchUser);
   const [openForgotPrompt, setOpenForgotPrompt] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const { username, password } = event.target.elements;
+
+    const userFound = user.find((user) => user.username === username.value);
+    if (!userFound) {
+      toast.error("Invalid Username");
+      return;
+    }
+
+    // Check if the password is correct
+    if (userFound.password !== password.value) {
+      toast.error("Invalid Password");
+      return;
+    } else {
+      if (userFound.role === "superadmin") {
+        toast.success("Welcom Super Admin User");
+      } else {
+        toast.success(
+          "Welcome " +
+            username.value.charAt(0).toUpperCase() +
+            username.value.slice(1)
+        );
+      }
+    }
+    // If both username and password are correct, navigate to the dashboard
+    navigate("/dashboard");
+  };
 
   const handleOpenForgotPrompt = () => {
     setOpenForgotPrompt(true);
@@ -74,7 +109,7 @@ const LoginPage = () => {
           />
         </div>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div
             style={{
               marginTop: window.innerWidth < 500 ? "0" : "100px",
@@ -85,6 +120,7 @@ const LoginPage = () => {
             }}
           >
             <TextField
+              type="text"
               required
               autoComplete="off"
               InputLabelProps={{ style: { color: "#F0F0F0" } }}
@@ -107,9 +143,11 @@ const LoginPage = () => {
                 },
               }}
               name="username"
+              id="username"
             />
             <TextField
               required
+              type="password"
               autoComplete="off"
               InputLabelProps={{ style: { color: "#F0F0F0" } }}
               InputProps={{ style: { color: "#F0F0F0" } }}
@@ -131,6 +169,7 @@ const LoginPage = () => {
                 },
               }}
               name="password"
+              id="password"
             />
             <ButtonBase
               onClick={() => handleOpenForgotPrompt()}

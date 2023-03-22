@@ -13,12 +13,18 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useState } from "react";
 import dictLogo from "../Images/DICT-Logo-only.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!isDrawerOpen);
+  };
+
+  const handleLogout = (event) => {
+    navigate("/");
   };
 
   return (
@@ -108,6 +114,7 @@ const Navbar = () => {
               </Typography>
             </ButtonBase>
             <ButtonBase
+              onClick={handleLogout}
               sx={{
                 color: "#F0F0F0",
                 marginBottom: "20px",
@@ -142,9 +149,10 @@ const Navbar = () => {
             sx={{
               color: "#F0F0F0",
               fontSize: "48px",
-              fontWeight:"bold",
+              fontWeight: "bold",
               "@media (max-width:530px)": {
                 fontSize: "30px",
+                textAlign: "center",
               },
             }}
           >

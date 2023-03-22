@@ -2,7 +2,7 @@ import React from "react";
 import { Paper, Typography, Box } from "@mui/material";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 
-const User = () => {
+const User = (prop) => {
   return (
     <Paper
       sx={{
@@ -25,8 +25,8 @@ const User = () => {
         }}
       >
         <AdminPanelSettingsIcon sx={{ color: "#F0F0F0", fontSize: "42px" }} />
-        <Typography variant="h6" color="white">
-          Super Admin
+        <Typography variant="h6" color="#F0F0F0">
+          {prop.userFound}
         </Typography>
       </Box>
     </Paper>

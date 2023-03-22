@@ -1,16 +1,17 @@
 import Layout from "./Components/Layout";
-import Navbar from "./Components/Navbar";
+import LoginPage from "./Components/Login/LoginPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LoginPage from "./Components/Login/LoginPage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <ToastContainer position="bottom-left" autoClose={3000} />
-      <Navbar />
-      <Layout />
-      <LoginPage/>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="dashboard" element={<Layout />} />
+      </Routes>
     </div>
   );
 }
