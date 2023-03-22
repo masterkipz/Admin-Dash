@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/material";
 import React from "react";
-import { fetchItem, deleteItem, editItem } from "../api/itemApi";
+import { fetchItem, deleteItem, editItem, searchItem } from "../api/itemApi";
 import { useState } from "react";
 import { useQuery } from "react-query";
 import Edit from "@mui/icons-material/Edit";
@@ -45,6 +45,10 @@ const TableInventory = (props) => {
 
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
+
+  const totalSearches = props.totalSearchResults;
+  
+  
 
   const handleViewClick = (item) => {
     setSelectedItem(item);
@@ -180,7 +184,7 @@ const TableInventory = (props) => {
                     width: "17%",
                     "@media (max-width:600px)": {
                       width: "13%",
-                    }
+                    },
                   }}
                   align="left"
                 >
@@ -507,6 +511,7 @@ const TableInventory = (props) => {
           <PaginationButton
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
+            totalSearches={totalSearches}
           />
         </Box>
       </Paper>

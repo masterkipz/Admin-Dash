@@ -15,15 +15,25 @@ const PaginationButton = (props) => {
     fetchData();
   }, []);
 
-  const totalPages = Math.ceil(pageTotal / 10);
-
   const handlePageChange = (event, value) => {
-      props.setCurrentPage(value);
+    props.setCurrentPage(value);
   };
+
+  let totalPage = 0;
+
+  if (props.totalSearches === 0) {
+    totalPage = Math.ceil(pageTotal / 10);
+  } else {
+    totalPage = Math.ceil(props.totalSearches / 10);
+  }
 
   return (
     <div style={{ marginLeft: "20px", marginTop: "10px" }}>
-      <Pagination count={totalPages} page={props.currentPage} onChange={handlePageChange} />
+      <Pagination
+        count={totalPage}
+        page={props.currentPage}
+        onChange={handlePageChange}
+      />
     </div>
   );
 };

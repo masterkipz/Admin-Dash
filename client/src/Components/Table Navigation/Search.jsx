@@ -12,7 +12,6 @@ const Search = (props) => {
     setSearchQuery(query);
     const data = await searchItem(query);
     props.setSearchResults(data);
-    console.log(data);
   };
 
   const searchPlaceholder = <SearchIcon />;

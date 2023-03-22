@@ -12,6 +12,12 @@ import Navbar from "./Navbar";
 const Layout = () => {
   const [searchResults, setSearchResults] = useState([]);
 
+  function getTotalSearchResults() {
+    return searchResults.length;
+  }
+
+  const totalSearchResults = getTotalSearchResults();
+
   return (
     <>
       <Navbar />
@@ -43,7 +49,10 @@ const Layout = () => {
               <Search setSearchResults={setSearchResults} />
             </Paper>
           </div>
-          <TableInventory searchResults={searchResults} />
+          <TableInventory
+            searchResults={searchResults}
+            totalSearchResults={totalSearchResults}
+          />
         </Container>
         <Container maxWidth="xs" sx={{ marginBottom: "10px" }}>
           <Box
