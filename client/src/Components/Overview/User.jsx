@@ -1,8 +1,13 @@
 import React from "react";
 import { Paper, Typography, Box } from "@mui/material";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import { UserContext } from "../../store/userContext";
+import { useContext } from "react";
 
-const User = (prop) => {
+const User = () => {
+
+  const userFound = useContext(UserContext)
+
   return (
     <Paper
       sx={{
@@ -26,7 +31,7 @@ const User = (prop) => {
       >
         <AdminPanelSettingsIcon sx={{ color: "#F0F0F0", fontSize: "42px" }} />
         <Typography variant="h6" color="#F0F0F0">
-          {prop.userFound}
+          {userFound}
         </Typography>
       </Box>
     </Paper>
