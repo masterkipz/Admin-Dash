@@ -1,22 +1,30 @@
 {
   "user": [
     {
+      "id": "1",
       "username": "clifford",
       "password": "superadmin",
-      "role": "superadmin"
+      "role": "superadmin",
+      "last_login_time":"2023-03-01",
+      "status": "active"
     },
     {
+      "id": "2",
       "username": "elmer",
       "password": "elmer",
-      "role": "user"
+      "role": "user",
+      "last_login_time":"2023-03-01",
+      "status": "active"
     },
     {
+      "id": "3",
       "username": "mark",
       "password": "mark",
-      "role": "user"
+      "role": "user",
+      "last_login_time":"2023-03-01",
+      "status": "blocked"
     }
   ],
-
   "items": [
     {
       "property_num": "PN-001",
@@ -369,6 +377,28 @@
       "date_counted": "asdasd",
       "person_accountable": "asdasd",
       "location": "asdsad"
+    },
+    {
+      "property_num": "123456",
+      "asset_classification": "asdasd",
+      "item": "sadasd",
+      "serial_no": "asdasd",
+      "acquisition_cost": "asdasd",
+      "date_acquired": "asdasd",
+      "date_counted": "asdasd",
+      "person_accountable": "asdasd",
+      "location": "sadasdsad"
+    },
+    {
+      "property_num": "asdasdasdasd",
+      "asset_classification": "asdasd",
+      "item": "asdasd",
+      "serial_no": "asdasd",
+      "acquisition_cost": "asdasd",
+      "date_acquired": "asdasd",
+      "date_counted": "asdasd",
+      "person_accountable": "asdasd",
+      "location": "asdasdsa"
     }
   ]
 }

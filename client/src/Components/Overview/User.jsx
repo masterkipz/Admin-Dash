@@ -1,12 +1,16 @@
 import React from "react";
 import { Paper, Typography, Box } from "@mui/material";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import { UserContext } from "../../store/userContext";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useContext } from "react";
+import { UserContext } from "../../store/userContext";
 
 const User = () => {
+  const { userFoundState, userRoleState } = useContext(UserContext);
 
-  const userFound = useContext(UserContext)
+  const formattedUserState =
+    userFoundState.charAt(0).toUpperCase() +
+    userFoundState.slice(1).toLowerCase();
 
   return (
     <Paper
@@ -29,9 +33,13 @@ const User = () => {
           padding: "10px",
         }}
       >
-        <AdminPanelSettingsIcon sx={{ color: "#F0F0F0", fontSize: "42px" }} />
+        {userRoleState === "superadmin" ? (
+          <AdminPanelSettingsIcon sx={{ color: "#F0F0F0", fontSize: "42px" }} />
+        ) : (
+          <AccountCircleIcon sx={{ color: "#F0F0F0", fontSize: "42px" }} />
+        )}
         <Typography variant="h6" color="#F0F0F0">
-          {userFound}
+          {formattedUserState}
         </Typography>
       </Box>
     </Paper>

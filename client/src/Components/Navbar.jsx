@@ -14,8 +14,12 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { useState } from "react";
 import dictLogo from "../Images/DICT-Logo-only.png";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../store/userContext";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const { setUserFoundState, userRoleState } = useContext(UserContext);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -23,7 +27,20 @@ const Navbar = () => {
     setDrawerOpen(!isDrawerOpen);
   };
 
+  const handleNavigateDashboard = (event) => {
+    navigate("/dashboard");
+  };
+
+  const handleNavigateManageUser = (event) => {
+    if (userRoleState !== "superadmin") {
+      toast.error("Access Denied");
+    } else {
+      navigate("/manage_user");
+    }
+  };
+
   const handleLogout = (event) => {
+    setUserFoundState(null);
     navigate("/");
   };
 
@@ -75,6 +92,7 @@ const Navbar = () => {
           </Box>
           <Box display="flex" flexDirection="column" alignItems="flex-start">
             <ButtonBase
+              onClick={handleNavigateDashboard}
               sx={{
                 color: "#F0F0F0",
                 marginBottom: "20px",
@@ -89,10 +107,11 @@ const Navbar = () => {
                 }}
               >
                 <DashboardIcon sx={{ marginRight: "10px", fontSize: "30px" }} />
-                Dashboard
+                Inventory
               </Typography>
             </ButtonBase>
             <ButtonBase
+              onClick={handleNavigateManageUser}
               sx={{
                 color: "#F0F0F0",
                 marginBottom: "20px",
