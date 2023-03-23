@@ -42,10 +42,10 @@ const searchItem = async (query = "") => {
 };
 
 const addItem = async (item) => {
-  const propertyNum = item.property_num;
+  const propertyId = item._id;
 
   // Check if the property_num already exists
-  const existingItem = await fetchItem(propertyNum);
+  const existingItem = await fetchItem(propertyId);
   if (existingItem) {
     toast.error("Duplicate Property Number");
   }
@@ -62,8 +62,8 @@ const addItem = async (item) => {
   }
 };
 
-const editItem = async (property_num, item) => {
-  const response = await fetch(`http://localhost:3500/items/${property_num}`, {
+const editItem = async (_id, item) => {
+  const response = await fetch(`http://localhost:3500/items/${_id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -75,8 +75,8 @@ const editItem = async (property_num, item) => {
   }
 };
 
-const deleteItem = async (property_num) => {
-  const response = await fetch(`http://localhost:3500/items/${property_num}`, {
+const deleteItem = async (_id) => {
+  const response = await fetch(`http://localhost:3500/items/${_id}`, {
     method: "DELETE",
   });
   if (!response.ok) {

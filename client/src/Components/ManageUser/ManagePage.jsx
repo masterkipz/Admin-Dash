@@ -69,7 +69,7 @@ const ManagePage = () => {
           <TableBody>
             {user &&
               user.map((users) => (
-                <TableRow key={user.id}>
+                <TableRow key={users.userId}>
                   <TableCell sx={{ color: "#041C32", fontStyle: "italic" }}>
                     {users.username}
                   </TableCell>
@@ -77,10 +77,10 @@ const ManagePage = () => {
                     {users.password}
                   </TableCell>
                   <TableCell sx={{ color: "#041C32", fontStyle: "italic" }}>
-                    {users.role}
+                    {users.last_login_time}
                   </TableCell>
                   <TableCell sx={{ color: "#041C32", fontStyle: "italic" }}>
-                    {users.last_login_time}
+                    {users.role}
                   </TableCell>
                   <TableCell sx={{ color: "#041C32", fontStyle: "italic" }}>
                     {users.status}

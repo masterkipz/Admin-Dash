@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import { useQuery } from "react-query";
 import { toast } from "react-toastify";
-import { fetchUser } from "./api/userApi";
+import { fetchUser, updateUserLoginTime } from "./api/userApi";
 import { UserContext } from "./store/userContext";
 import { useState, useEffect } from "react";
 import ManageUser from "./Components/ManageUser/ManageUser";
@@ -70,14 +70,16 @@ function App() {
         );
       }
     }
+    await updateUserLoginTime(userFound._id);
+
     setUserFoundState(userFound.username);
     setUserRoleState(userFound.role);
     // If both username and password are correct, navigate to the dashboard
     navigate("/dashboard");
   };
+
   // console.log(userFoundState); // Test if username is stored correctly
   // console.log(userRoleState); // Test if username is stored correctly
-
   return (
     <div>
       <UserContext.Provider
@@ -115,6 +117,7 @@ function App() {
               )
             }
           />
+          <Route path="/*" element={<NoUser />} />
         </Routes>
       </UserContext.Provider>
     </div>

@@ -72,7 +72,7 @@ const TableInventory = (props) => {
     event.preventDefault();
 
     try {
-      await editItem(item.property_num, item);
+      await editItem(item._id, item);
       setItem(null);
       setEditModalOpen(false);
       window.location.reload();
@@ -96,7 +96,7 @@ const TableInventory = (props) => {
 
   const handleDeleteConfirm = async () => {
     try {
-      await deleteItem(selectedItem.property_num);
+      await deleteItem(selectedItem._id);
 
       setDeleteModalOpen(false);
       setSelectedItem(null);
@@ -264,7 +264,7 @@ const TableInventory = (props) => {
                 ? props.searchResults
                     .slice(indexOfFirstItem, indexOfLastItem)
                     .map((item) => (
-                      <TableRow key={item.property_num}>
+                      <TableRow key={item._id}>
                         <TableCell align="left" sx={{ color: "#041C32" }}>
                           {item.property_num}
                         </TableCell>
@@ -384,7 +384,7 @@ const TableInventory = (props) => {
                     ))
                 : items &&
                   items.slice(indexOfFirstItem, indexOfLastItem).map((item) => (
-                    <TableRow key={item.property_num}>
+                    <TableRow key={item._id}>
                       <TableCell align="left" sx={{ color: "#041C32" }}>
                         {item.property_num}
                       </TableCell>
