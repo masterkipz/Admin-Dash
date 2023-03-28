@@ -5,6 +5,7 @@ function HeaderOverview() {
   return (
     <Paper
       sx={{
+        borderRadius: "20px",
         width: "100%",
         height: "80px",
         backgroundColor: "#041C32",
@@ -14,7 +15,7 @@ function HeaderOverview() {
       }}
     >
       <Typography variant="h3" color="#F0F0F0" fontWeight="bold">
-        Data Overview
+        Overview
       </Typography>
     </Paper>
   );

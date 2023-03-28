@@ -1,7 +1,28 @@
 import { Modal, Paper, Typography, TextField, Button } from "@mui/material";
 import React from "react";
+import { useState } from "react";
 
 const AddModal = (props) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused2, setIsFocused2] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+  const handleFocus2 = () => {
+    setIsFocused2(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(true);
+  };
+  const handleBlur2 = () => {
+    setIsFocused2(true);
+  };
+
+  const textColor = isFocused ? "#FFFFFF" : "#041C32";
+  const textColor2 = isFocused2 ? "#FFFFFF" : "#041C32";
+
   return (
     <Modal open={props.addModalOpen} onClose={props.handleCloseModal}>
       <Paper
@@ -138,6 +159,7 @@ const AddModal = (props) => {
               name="serial_no"
             />
             <TextField
+              type="number"
               InputLabelProps={{ style: { color: "#F0F0F0" } }}
               InputProps={{ style: { color: "#F0F0F0" } }}
               value={props.item && props.item.acquisiton_cost}
@@ -170,8 +192,13 @@ const AddModal = (props) => {
             }}
           >
             <TextField
+              type="date"
               InputLabelProps={{ style: { color: "#F0F0F0" } }}
-              InputProps={{ style: { color: "#F0F0F0" } }}
+              InputProps={{
+                style: { color: textColor },
+                onFocus: handleFocus,
+                onBlur: handleBlur,
+              }}
               value={props.item && props.item.date_acquired}
               onChange={props.handleAddChange}
               label="Date Acquired"
@@ -194,8 +221,13 @@ const AddModal = (props) => {
               name="date_acquired"
             />
             <TextField
+              type="date"
               InputLabelProps={{ style: { color: "#F0F0F0" } }}
-              InputProps={{ style: { color: "#F0F0F0" } }}
+              InputProps={{
+                style: { color: textColor2 },
+                onFocus: handleFocus2,
+                onBlur: handleBlur2,
+              }}
               value={props.item && props.item.date_counted}
               onChange={props.handleAddChange}
               label="Date Counted"
@@ -270,7 +302,11 @@ const AddModal = (props) => {
               type="submit"
               onClick={props.handleAddItem}
               variant="contained"
-              style={{ backgroundColor: "#F0F0F0",color:"#041C32", margin: "5px" }}
+              style={{
+                backgroundColor: "#F0F0F0",
+                color: "#041C32",
+                margin: "5px",
+              }}
             >
               Add Item
             </Button>

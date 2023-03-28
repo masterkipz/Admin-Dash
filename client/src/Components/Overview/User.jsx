@@ -19,6 +19,7 @@ const User = () => {
         height: "80px",
         backgroundColor: "#041C32",
         display: "flex",
+        borderRadius: "20px",
       }}
     >
       <Box

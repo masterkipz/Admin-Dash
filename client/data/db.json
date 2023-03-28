@@ -6,7 +6,7 @@
       "username": "clifford",
       "password": "superadmin",
       "role": "superadmin",
-      "last_login_time": "3/24/2023, 2:22:58 AM",
+      "last_login_time": "3/25/2023, 12:21:52 AM",
       "status": "active"
     },
     {
@@ -14,9 +14,9 @@
       "userId": "2",
       "username": "elmer",
       "password": "elmer",
-      "role": "user",
-      "last_login_time": "3/24/2023, 1:59:48 AM",
-      "status": "active"
+      "role": "superadmin",
+      "last_login_time": "3/25/2023, 12:32:55 AM",
+      "status": "offline"
     },
     {
       "_id": "1sdfgsdgssdfg",
@@ -24,58 +24,130 @@
       "username": "mark",
       "password": "mark",
       "role": "user",
-      "last_login_time": "3/24/2023, 2:13:11 AM",
+      "last_login_time": "3/25/2023, 12:32:58 AM",
       "status": "active"
     }
   ],
   "items": [
     {
-      "_id": "1",
       "property_num": "PN-001",
-      "asset_classification": "Desktop",
-      "item": "HP",
-      "serial_no": "S1-001",
-      "acquisition_cost": 45000,
-      "date_acquired": "2022-01-02",
-      "date_counted": "2022-12-31",
-      "location": "Quezon City",
-      "person_accountable": "Clifford Tugas"
+      "asset_classification": "Laptop",
+      "item": "Asus",
+      "serial_no": "SN-001",
+      "acquisition_cost": "55000",
+      "date_acquired": "2023-03-24",
+      "date_counted": "2023-03-24",
+      "person_accountable": "Clifford",
+      "location": "Pinili",
+      "_id": 1
     },
     {
-      "_id": "2",
       "property_num": "PN-002",
+      "asset_classification": "Desktop",
+      "item": "Xitrix",
+      "serial_no": "SN-003",
+      "acquisition_cost": "23000",
+      "date_acquired": "2023-03-24",
+      "date_counted": "2023-03-24",
+      "person_accountable": "Elmer",
+      "location": "Laoag City",
+      "_id": 2
+    },
+    {
+      "property_num": "PN-003",
+      "asset_classification": "Mobile Phone",
+      "item": "Apple",
+      "serial_no": "SN-003",
+      "acquisition_cost": "79000",
+      "date_acquired": "2023-03-24",
+      "date_counted": "2023-03-24",
+      "person_accountable": "Mark",
+      "location": "Laoag City",
+      "_id": 3
+    },
+    {
+      "property_num": "PN-004",
       "asset_classification": "Laptop",
       "item": "Dell",
-      "serial_no": "S1-002",
-      "acquisition_cost": 55000,
-      "date_acquired": "2021-10-12",
-      "date_counted": "2022-12-31",
-      "location": "Makati City",
-      "person_accountable": "John Doe"
+      "serial_no": "SN-004",
+      "acquisition_cost": "95000",
+      "date_acquired": "2023-03-25",
+      "date_counted": "2023-03-25",
+      "person_accountable": "Jane",
+      "location": "Manila",
+      "_id": 4
     },
     {
-      "_id": "3",
-      "property_num": "PN-003",
+      "property_num": "PN-005",
+      "asset_classification": "Desktop Computer",
+      "item": "HP",
+      "serial_no": "SN-005",
+      "acquisition_cost": "120000",
+      "date_acquired": "2023-03-20",
+      "date_counted": "2023-03-20",
+      "person_accountable": "John",
+      "location": "Cebu City",
+      "_id": 5
+    },
+    {
+      "property_num": "PN-006",
+      "asset_classification": "Tablet",
+      "item": "Samsung",
+      "serial_no": "SN-006",
+      "acquisition_cost": "45000",
+      "date_acquired": "2023-03-22",
+      "date_counted": "2023-03-22",
+      "person_accountable": "Mary",
+      "location": "Davao City",
+      "_id": 6
+    },
+    {
+      "property_num": "PN-007",
       "asset_classification": "Printer",
       "item": "Epson",
-      "serial_no": "S3-003",
-      "acquisition_cost": 25000,
-      "date_acquired": "2022-05-22",
-      "date_counted": "2022-12-31",
-      "location": "Taguig City",
-      "person_accountable": "Juan Dela Cruz"
+      "serial_no": "SN-007",
+      "acquisition_cost": "25000",
+      "date_acquired": "2023-03-23",
+      "date_counted": "2023-03-23",
+      "person_accountable": "Dave",
+      "location": "Baguio City",
+      "_id": 7
     },
     {
-      "_id": "4",
-      "property_num": "PN-004",
-      "asset_classification": "Desktop",
-      "item": "HP",
-      "serial_no": "S4-004",
-      "acquisition_cost": 45000,
-      "date_acquired": "2022-01-02",
-      "date_counted": "2022-12-31",
-      "location": "Quezon City",
-      "person_accountable": "Jane Smith"
+      "property_num": "PN-008",
+      "asset_classification": "Scanner",
+      "item": "Canon",
+      "serial_no": "SN-008",
+      "acquisition_cost": "30000",
+      "date_acquired": "2023-03-21",
+      "date_counted": "2023-03-21",
+      "person_accountable": "Sarah",
+      "location": "Iloilo City",
+      "_id": 8
+    },
+    {
+      "property_num": "PN-009",
+      "asset_classification": "Camera",
+      "item": "Nikon",
+      "serial_no": "SN-009",
+      "acquisition_cost": "75000",
+      "date_acquired": "2023-03-19",
+      "date_counted": "2023-03-19",
+      "person_accountable": "Mike",
+      "location": "Zamboanga City",
+      "_id": 9
+    },
+    {
+      "property_num": "PN-010",
+      "asset_classification": "Headphones",
+      "item": "Bose",
+      "serial_no": "SN-010",
+      "acquisition_cost": "20000",
+      "date_acquired": "2023-03-18",
+      "date_counted": "2023-03-18",
+      "person_accountable": "Jenny",
+      "location": "Bacolod City",
+      "_id": 10
     }
   ]
 }

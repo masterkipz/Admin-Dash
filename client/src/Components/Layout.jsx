@@ -6,6 +6,7 @@ import TableInventory from "./TableInventory";
 import { useState } from "react";
 import HeaderOverview from "./Overview/HeaderOverview";
 import Data from "./Overview/Data";
+import Data2 from "./Overview/Data2";
 import User from "./Overview/User";
 import Navbar from "./Navbar";
 
@@ -66,7 +67,7 @@ const Layout = () => {
           >
             <HeaderOverview />
             <Data />
-            <Data />
+            <Data2 />
             <User />
           </Box>
         </Container>

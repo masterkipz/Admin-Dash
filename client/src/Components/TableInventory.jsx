@@ -166,7 +166,7 @@ const TableInventory = (props) => {
       <Paper
         sx={{
           marginBottom: "10px",
-          borderRadius: "10",
+          borderRadius: "20px",
           padding: "20px",
           backgroundColor: "#F0F0F0",
         }}

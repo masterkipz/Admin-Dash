@@ -29,17 +29,20 @@ const addUser = async (user) => {
   }
 };
 
-const updateUserLoginTime = async (_id) => {
+const updateUserLoginTime = async (_id, activeStatus) => {
   const loginTime = new Date();
   const loginStatus = loginTime.toLocaleString();
-  console.log(loginStatus);
   const userResponse = await fetch(`http://localhost:3500/user/${_id}`);
   if (!userResponse.ok) {
     console.log(userResponse);
     throw new Error("Network response was not ok");
   }
   const user = await userResponse.json();
-  const updatedUser = { ...user, last_login_time: loginStatus };
+  const updatedUser = {
+    ...user,
+    last_login_time: loginStatus,
+    status: activeStatus,
+  };
   const response = await fetch(`http://localhost:3500/user/${_id}`, {
     method: "PUT",
     headers: {

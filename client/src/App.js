@@ -21,11 +21,15 @@ function App() {
   const { data: user } = useQuery("user", fetchUser);
   const navigate = useNavigate();
   const location = useLocation();
+
   const [userFoundState, setUserFoundState] = useState(
     localStorage.getItem("userFoundState") || null
   );
   const [userRoleState, setUserRoleState] = useState(
     localStorage.getItem("userRoleState") || null
+  );
+  const [userStatusState, setUserStatusState] = useState(
+    localStorage.getItem("userStatusState") || null
   );
 
   useEffect(() => {
@@ -45,6 +49,15 @@ function App() {
       localStorage.setItem("userRoleState", userRoleState);
     }
   }, [userRoleState, location]);
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setUserStatusState(null);
+      localStorage.removeItem("userStatusState"); // Remove userStatusState from localStorage
+    } else {
+      localStorage.setItem("userStatusState", userStatusState);
+    }
+  }, [userStatusState, location]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -70,8 +83,9 @@ function App() {
         );
       }
     }
-    await updateUserLoginTime(userFound._id);
 
+    await updateUserLoginTime(userFound._id, "active",);
+    setUserStatusState(userFound._id);
     setUserFoundState(userFound.username);
     setUserRoleState(userFound.role);
     // If both username and password are correct, navigate to the dashboard
@@ -88,6 +102,7 @@ function App() {
           setUserFoundState,
           userRoleState,
           setUserRoleState,
+          userStatusState,
         }}
       >
         <ToastContainer position="bottom-left" autoClose={3000} />

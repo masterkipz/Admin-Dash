@@ -17,9 +17,11 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../store/userContext";
 import { toast } from "react-toastify";
+import { updateUserLoginTime } from "../api/userApi";
 
 const Navbar = () => {
-  const { setUserFoundState, userRoleState } = useContext(UserContext);
+  const { setUserFoundState, userRoleState, userStatusState } =
+    useContext(UserContext);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -39,7 +41,9 @@ const Navbar = () => {
     }
   };
 
-  const handleLogout = (event) => {
+  const handleLogout = async (event) => {
+
+    await updateUserLoginTime(userStatusState, "offline");
     setUserFoundState(null);
     navigate("/");
   };
